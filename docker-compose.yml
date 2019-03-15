@@ -1,0 +1,25 @@
+version: '2'
+volumes:
+    resin-data:
+services:
+  influxdb:
+    restart: always
+    build: ./influxdb
+    volumes:
+      - 'resin-data:/data'
+  grafana:
+    restart: always
+    build: ./grafana
+    ports:
+      - "80:3000"
+    volumes:
+      - 'resin-data:/data'
+  sensor:
+    privileged: true
+    build: ./sensor
+    restart: always
+    labels:
+      io.balena.features.kernel-modules: '1'
+    depends_on:
+     - influxdb
+     - grafana

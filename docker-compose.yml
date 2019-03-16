@@ -15,11 +15,9 @@ services:
     volumes:
       - 'resin-data:/data'
   sensor:
-    privileged: true
     build: ./sensor
+    privileged: true
     restart: always
-    labels:
-      io.balena.features.kernel-modules: '1'
     depends_on:
      - influxdb
      - grafana

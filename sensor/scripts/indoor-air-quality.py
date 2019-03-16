@@ -33,7 +33,7 @@ sensor.select_gas_heater_profile(0)
 
 start_time = time.time()
 curr_time = time.time()
-burn_in_time = 60
+burn_in_time = 300
 
 burn_in_data = []
 
@@ -41,13 +41,15 @@ burn_in_data = []
 # Collect gas resistance burn-in values, then use the average
 # of the last 50 values to set the upper limit for calculating
 # gas_baseline.
-print('Collecting gas resistance burn-in data for 1 min\n')
+print('Collecting gas resistance burn-in data for 5 min\n')
 while curr_time - start_time < burn_in_time:
     curr_time = time.time()
     if sensor.get_sensor_data() and sensor.data.heat_stable:
         gas = sensor.data.gas_resistance
         burn_in_data.append(gas)
-        print('Gas: {0} Ohms'.format(gas))
+        timeleft = 300 - (curr_time - start_time)
+        timeleft = int(round(timeleft))
+        print('Gas: {0} Ohms. Starting data collection loop in {1:d} seconds'.format(gas, timeleft))
         time.sleep(1)
 
 gas_baseline = sum(burn_in_data[-50:]) / 50.0

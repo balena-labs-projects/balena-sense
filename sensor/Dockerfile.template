@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi3-python
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python
 
 RUN pip install smbus bme680 influxdb
 

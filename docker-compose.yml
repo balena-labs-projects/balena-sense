@@ -1,23 +1,24 @@
 version: '2'
 volumes:
-    resin-data:
+    sense-data:
 services:
   influxdb:
     restart: always
     build: ./influxdb
     volumes:
-      - 'resin-data:/data'
+      - 'sense-data:/data'
   grafana:
     restart: always
     build: ./grafana
     ports:
       - "80:3000"
     volumes:
-      - 'resin-data:/data'
+      - 'sense-data:/data'
+    depends_on:
+      - influxdb
   sensor:
     build: ./sensor
     privileged: true
     restart: always
     depends_on:
      - influxdb
-     - grafana

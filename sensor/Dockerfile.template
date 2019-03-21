@@ -1,10 +1,16 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-python
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:build
 
-RUN pip install smbus bme680 influxdb
+WORKDIR /tmp
+RUN git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
+WORKDIR /tmp/RTIMU/Linux/python
+RUN python ./setup.py build
+RUN python ./setup.py install
+
+RUN pip install smbus bme680 influxdb sense-hat
 
 WORKDIR /usr/src/app
 
 COPY ./scripts ./scripts
 RUN chmod +x scripts/*.py
 
-CMD /usr/src/app/scripts/indoor-air-quality.py
+CMD /usr/src/app/scripts/take_measurement.py

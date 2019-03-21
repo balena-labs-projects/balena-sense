@@ -30,7 +30,18 @@ def get_readings(sensor):
     air_quality_score = air_quality_score * 100 # convert to %
 
     # Flip the score so that 100 is good and 0 is bad
-    air_quality_score = abs(air_quality_score - 100)    
+    air_quality_score = abs(air_quality_score - 100)
+
+    # As we have a sense HAT we can give an indication of the air quality on the LED matrix
+    if air_quality_score > 66:
+        # Happy face!
+        sensor.load_image("/usr/src/app/scripts/happy.png")
+    elif air_quality_score > 33:
+        # Neutral face
+        sensor.load_image("/usr/src/app/scripts/hmm.png")
+    else:
+        # Sad face
+        sensor.load_image("/usr/src/app/scripts/sad.png")
 
     return [
         {

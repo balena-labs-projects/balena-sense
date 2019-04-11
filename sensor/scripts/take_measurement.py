@@ -16,14 +16,13 @@ readfrom = 'unset'
 try:
     sensor = bme680.BME680(bme680.I2C_ADDR_PRIMARY)
 except IOError:
-    print 'BME680 not found on 0x76'
-else:
-    readfrom = 'bme680'
-    print 'Using BME680 for readings'
-    # Import the bme680 methods and nitialise the bme680 burnin
-    import bme680_air_quality
-    bme680_air_quality.start_bme680(sensor)
-    get_readings = bme680_air_quality.get_readings
+    print 'BME680 not found on 0x76, trying 0x77'
+
+try:
+    sensor = bme680.BME680(bme680.I2C_ADDR_SECONDARY)
+except IOError:
+    print 'BME680 not found on 0x77'
+
 
 # If no BME680, is there a Sense HAT?
 if readfrom == 'unset':
@@ -37,6 +36,13 @@ if readfrom == 'unset':
         # Import the sense hat methods
         import sense_hat_air_quality
         get_readings = sense_hat_air_quality.get_readings
+else:
+        readfrom = 'bme680'
+        print 'Using BME680 for readings'
+        # Import the bme680 methods and nitialise the bme680 burnin
+        import bme680_air_quality
+        bme680_air_quality.start_bme680(sensor)
+        get_readings = bme680_air_quality.get_readings
 
 # If this is still unset, no sensors were found; quit!
 if readfrom == 'unset':

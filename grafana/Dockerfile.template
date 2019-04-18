@@ -12,10 +12,9 @@ RUN install_packages \
       ucf
 
 RUN if [ "%%BALENA_MACHINE_NAME%%" = "raspberry-pi" ]; then \
-    # we are using a 3rd party build of grafana until the binaries are confirmed working on rpi0
-    curl -o /tmp/grafana.deb https://raw.githubusercontent.com/trashware/grafana-rpi-zero/master/grafana_6.0.1_armhf.deb; \
+    curl -o /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana-rpi_6.1.4_armhf.deb; \
   else \
-    curl -o /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana_6.0.2_armhf.deb; \
+    curl -o /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana_6.1.4_armhf.deb; \
   fi
 
 RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb

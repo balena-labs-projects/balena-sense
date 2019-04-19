@@ -9,8 +9,6 @@ As an alternative, if you have one already, you can use the Raspberry Pi Sense-H
 
 ### Hardware required
 
-![](https://balena.io/blog/content/images/2019/03/hardware-required.jpg)
-
 Here’s the shopping list for this project. Depending if you’d like to crack out the soldering iron or not will dictate what sensor board you can use; some are plug and play, some require a little soldering.
 
 * Raspberry Pi 2Bv1.2/3B/3B+/3A+/Zero

@@ -11,11 +11,8 @@ RUN install_packages \
       libfontconfig1 \
       ucf
 
-RUN if [ "%%BALENA_MACHINE_NAME%%" = "raspberry-pi" ]; then \
-    curl -o /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana-rpi_6.1.4_armhf.deb; \
-  else \
-    curl -o /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana_6.1.4_armhf.deb; \
-  fi
+COPY ./download.sh /usr/src/app/download.sh
+RUN /usr/src/app/download.sh "%%BALENA_MACHINE_NAME%%"
 
 RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb
 

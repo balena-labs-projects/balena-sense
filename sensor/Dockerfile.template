@@ -1,12 +1,6 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-python:2.7.15-build
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
 
-WORKDIR /tmp
-RUN git clone https://github.com/RPi-Distro/RTIMULib/ RTIMU
-WORKDIR /tmp/RTIMU/Linux/python
-RUN python ./setup.py build
-RUN python ./setup.py install
-
-RUN pip install smbus bme680 influxdb sense-hat
+RUN pip install smbus bme680 influxdb
 
 WORKDIR /usr/src/app
 

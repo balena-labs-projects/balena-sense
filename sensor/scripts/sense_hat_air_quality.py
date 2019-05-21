@@ -52,7 +52,6 @@ def get_readings(sensor):
         ]
     elif air_quality_score > 33:
         # Neutral face
-        # Happy face!
         face_color = [250, 255, 0]
         face_pixels = [
             0, 0, 1, 1, 1, 1, 0, 0,
@@ -66,7 +65,6 @@ def get_readings(sensor):
         ]
     else:
         # Sad face
-        # Happy face!
         face_color = [255, 0, 0]
         face_pixels = [
             0, 0, 1, 1, 1, 1, 0, 0,

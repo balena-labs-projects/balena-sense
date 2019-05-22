@@ -63,8 +63,13 @@ if readfrom == 'unset':
 influx_client = InfluxDBClient('influxdb', 8086, database='balena-sense')
 influx_client.create_database('balena-sense')
 
-
+count = 0
 while True:
     measurements = get_readings(sensor)
-    influx_client.write_points(measurements)
-    time.sleep(10)
+
+    count = count + 1
+    if count == 10:
+        influx_client.write_points(measurements)
+        count = 0
+        
+    time.sleep(1)

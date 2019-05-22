@@ -43,7 +43,7 @@ def start_bme680(sensor):
 
     gas_baseline = sum(burn_in_data[-50:]) / 50.0
 
-    print('Burn-in complete!\n')
+    print('Burn-in complete! Baseline: {0}\n'.format(gas_baseline))
     return gas_baseline
 
 
@@ -85,6 +85,12 @@ def get_readings(sensor):
 
         # Calculate air_quality_score.
         air_quality_score = hum_score + gas_score
+
+        print('Gas: {0:.2f} Ohms, Humidity: {1:.2f} %RH, Temperature: {2:.2f}, Air quality: {3:.2f}'.format(
+            gas,
+            hum,
+            sensor.data.temperature,
+            air_quality_score))
 
         return [
             {

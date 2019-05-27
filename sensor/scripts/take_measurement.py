@@ -8,6 +8,8 @@ import sys
 import bme680
 import time
 import smbus
+import requests
+
 from hts221 import HTS221
 from influxdb import InfluxDBClient
 
@@ -63,6 +65,21 @@ if readfrom == 'unset':
 influx_client = InfluxDBClient('influxdb', 8086, database='balena-sense')
 influx_client.create_database('balena-sense')
 
+# Set the default dashboard on Grafana (horrible hack to workaround https://community.grafana.com/t/change-home-dashboard/7441/13)
+headers = {
+    'Accept-Encoding': 'gzip, deflate, br',
+    'X-Grafana-Org-Id': '1',
+    'Accept-Language': 'en-IN,en;q=0.9,en-GB;q=0.8,en-US;q=0.7,ml;q=0.6,mt;q=0.5',
+    'Content-Type': 'application/json;charset=UTF-8',
+    'Accept': 'application/json, text/plain, */*',
+    'Cache-Control': 'no-cache',
+    'Connection': 'keep-alive',
+}
+
+data = '{"homeDashboardId":1,"theme":"","timezone":""}'
+response = requests.put('http://admin:admin@grafana/api/org/preferences', headers=headers, data=data)
+
+# Start the main loop taking readings every 1 second and recording every 10 seconds
 count = 0
 while True:
     measurements = get_readings(sensor)
@@ -71,5 +88,5 @@ while True:
     if count == 10:
         influx_client.write_points(measurements)
         count = 0
-        
+
     time.sleep(1)

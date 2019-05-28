@@ -1,10 +1,28 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:build AS build
 
-RUN pip install smbus bme680 influxdb
+ARG BSEC_FILENAME=BSEC_1.4.7.3_Generic_Release_20190410.zip
 
 WORKDIR /usr/src/app
 
-COPY ./scripts ./scripts
-RUN chmod +x scripts/*.py
+RUN install_packages \
+        unzip
 
-CMD /usr/src/app/scripts/take_measurement.py
+RUN git clone https://github.com/balena-io-playground/bsec_bme680_linux.git
+RUN wget https://ae-bst.resource.bosch.com/media/_tech/media/bsec/$BSEC_FILENAME
+RUN unzip -d bsec_bme680_linux/src $BSEC_FILENAME
+
+
+CMD while : ; do echo "${MESSAGE=Idling...}"; sleep ${INTERVAL=600}; done
+
+
+
+#FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
+
+#RUN pip install smbus bme680 influxdb
+
+#WORKDIR /usr/src/app
+
+#COPY ./scripts ./scripts
+#RUN chmod +x scripts/*.py
+
+#CMD /usr/src/app/scripts/take_measurement.py

@@ -1,22 +1,21 @@
-#!/usr/local/bin/python
-
 # This script detects for the presence of either a BME680 sensor on the I2C bus or a Sense HAT
 # The BME680 includes sensors for temperature, humidity, pressure and gas content
 # The Sense HAT does not have a gas sensor, and so air quality is approximated using temperature and humidity only.
 
 import sys
-import bme680
 import time
 import smbus
 
 from hts221 import HTS221
+from bme680 import BME680
 from influxdb import InfluxDBClient
 
 readfrom = 'unset'
+bus = smbus.SMBus(1)
 
 # First, check to see if there is a BME680 on the I2C bus
 try:
-    sensor = bme680.BME680(bme680.I2C_ADDR_PRIMARY)
+    bus.write_byte(0x76, 0)
 except IOError:
     print('BME680 not found on 0x76, trying 0x77')
 else:
@@ -25,7 +24,7 @@ else:
 # If we didn't find it on 0x76, look on 0x77
 if readfrom == 'unset':
     try:
-        sensor = bme680.BME680(bme680.I2C_ADDR_SECONDARY)
+        bus.write_byte(0x77, 0)
     except IOError:
         print('BME680 not found on 0x77')
     else:
@@ -34,8 +33,6 @@ if readfrom == 'unset':
 
 # If no BME680, is there a Sense HAT?
 if readfrom == 'unset':
-    bus = smbus.SMBus(1)
-
     try:
         bus.write_byte(0x5F, 0)
     except:
@@ -51,13 +48,15 @@ if readfrom == 'unset':
         get_readings = sense_hat_air_quality.get_readings
 else:
         print('Using BME680 for readings')
-        # Import the bme680 methods and nitialise the bme680 burnin
-        import bme680_air_quality
-        bme680_air_quality.start_bme680(sensor)
-        get_readings = bme680_air_quality.get_readings
+
+        sensor = BME680()
+        get_readings = sensor.get_readings
+        time.sleep(5)
+
 
 # If this is still unset, no sensors were found; quit!
 if readfrom == 'unset':
+    print('No suitable sensors found! Exiting.')
     sys.exit()
 
 # Create the database client, connected to the influxdb container, and select/create the database

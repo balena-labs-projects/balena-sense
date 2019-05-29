@@ -8,6 +8,7 @@ import sys
 import bme680
 import time
 import smbus
+
 from hts221 import HTS221
 from influxdb import InfluxDBClient
 
@@ -63,6 +64,7 @@ if readfrom == 'unset':
 influx_client = InfluxDBClient('influxdb', 8086, database='balena-sense')
 influx_client.create_database('balena-sense')
 
+# Start the main loop taking readings every 1 second and recording every 10 seconds
 count = 0
 while True:
     measurements = get_readings(sensor)
@@ -71,5 +73,5 @@ while True:
     if count == 10:
         influx_client.write_points(measurements)
         count = 0
-        
+
     time.sleep(1)

@@ -157,10 +157,7 @@
       "type": "gauge"
     },
     {
-      "aliasColors": {
-        "IAQ Accuracy": "rgb(92, 92, 92)",
-        "balena-sense.air_quality_score_accuracy": "rgb(87, 87, 83)"
-      },
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -178,7 +175,7 @@
         "current": false,
         "max": false,
         "min": false,
-        "show": true,
+        "show": false,
         "total": false,
         "values": false
       },
@@ -191,22 +188,12 @@
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
-      "seriesOverrides": [
-        {
-          "alias": "balena-sense.air_quality_score_accuracy",
-          "yaxis": 2
-        },
-        {
-          "alias": "IAQ Accuracy",
-          "yaxis": 2
-        }
-      ],
+      "seriesOverrides": [],
       "spaceLength": 10,
       "stack": false,
       "steppedLine": false,
       "targets": [
         {
-          "alias": "IAQ Score",
           "groupBy": [],
           "measurement": "balena-sense",
           "orderByTime": "ASC",
@@ -218,26 +205,6 @@
               {
                 "params": [
                   "air_quality_score"
-                ],
-                "type": "field"
-              }
-            ]
-          ],
-          "tags": []
-        },
-        {
-          "alias": "IAQ Accuracy",
-          "groupBy": [],
-          "measurement": "balena-sense",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "air_quality_score_accuracy"
                 ],
                 "type": "field"
               }
@@ -316,7 +283,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": "Indoor Air Quality (IAQ)",
+          "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
@@ -324,7 +291,7 @@
         },
         {
           "format": "short",
-          "label": "IAQ Accuracy",
+          "label": null,
           "logBase": 1,
           "max": null,
           "min": null,
@@ -963,7 +930,7 @@
       "yaxes": [
         {
           "decimals": null,
-          "format": "pressurekpa",
+          "format": "pressurembar",
           "label": "",
           "logBase": 1,
           "max": null,
@@ -993,7 +960,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-15m",
     "to": "now"
   },
   "timepicker": {

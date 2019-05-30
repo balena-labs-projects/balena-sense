@@ -28,4 +28,3 @@ services:
       - 'sense-data:/data'
     depends_on:
      - influxdb
-     - grafana

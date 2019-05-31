@@ -35,32 +35,32 @@
         "showThresholdMarkers": true,
         "thresholds": [
           {
-            "color": "dark-green",
+            "color": "#00e400",
             "index": 0,
             "value": null
           },
           {
-            "color": "#FFEE52",
+            "color": "#ffff00",
             "index": 1,
             "value": 51
           },
           {
-            "color": "semi-dark-orange",
+            "color": "#ff7e00",
             "index": 2,
             "value": 101
           },
           {
-            "color": "dark-red",
+            "color": "rgb(255, 0, 0)",
             "index": 3,
             "value": 151
           },
           {
-            "color": "rgb(82, 0, 43)",
+            "color": "rgb(143, 63, 151)",
             "index": 4,
             "value": 201
           },
           {
-            "color": "rgb(0, 0, 0)",
+            "color": "#7e0023",
             "index": 5,
             "value": 301
           }
@@ -79,7 +79,7 @@
             "from": "50.5",
             "id": 2,
             "operator": "",
-            "text": "Average",
+            "text": "Moderate",
             "to": "100.5",
             "type": 2,
             "value": "51"
@@ -88,8 +88,8 @@
             "from": "100.5",
             "id": 3,
             "operator": "",
-            "text": "Little bad",
-            "to": "150.0",
+            "text": "Unhealthy for sensitive groups",
+            "to": "150.5",
             "type": 2,
             "value": ""
           },
@@ -97,7 +97,7 @@
             "from": "150.5",
             "id": 5,
             "operator": "",
-            "text": "Bad",
+            "text": "Unhealthy",
             "to": "200.5",
             "type": 2,
             "value": ""
@@ -106,7 +106,7 @@
             "from": "200.5",
             "id": 6,
             "operator": "",
-            "text": "Worse",
+            "text": "Very unhealthy",
             "to": "300.5",
             "type": 2,
             "value": ""
@@ -115,7 +115,7 @@
             "from": "300.5",
             "id": 7,
             "operator": "",
-            "text": "Very bad",
+            "text": "Hazardous",
             "to": "500.5",
             "type": 2,
             "value": "300.5"
@@ -991,5 +991,5 @@
   "timezone": "",
   "title": "balenaSense",
   "uid": "pF3gRDiRk",
-  "version": 2
+  "version": 3
 }

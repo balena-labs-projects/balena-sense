@@ -2,6 +2,7 @@ import subprocess
 import json
 import threading
 import io
+import time
 
 class BME680:
     data = None
@@ -12,8 +13,17 @@ class BME680:
         else:
             self.command = '/usr/src/app/bsec_bme680_linux/bsec_bme680'
 
-        self.capture_thread = threading.Thread(target=self.capture)
+        self.capture_thread = threading.Thread(target=self.capturewrap)
         self.capture_thread.start()
+
+    def capturewrap(self):
+        while True:
+            try:
+                self.capture()
+            except BaseException as e:
+                print('{!r}; restarting capture thread'.format(e))
+            else:
+                print('Capture thread exited; restarting')
 
     def capture(self):
         # Start the process and commence capture and parsing of the output
@@ -23,6 +33,7 @@ class BME680:
             self.data = json.loads(line.strip())
 
         rc = process.poll()
+        time.sleep(2)
         return rc
 
     def get_readings(self, sensor):

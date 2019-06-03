@@ -35,7 +35,7 @@ try:
 except IOError:
     print('BME680 not found on 0x76, trying 0x77')
 else:
-    readfrom = 'bme680'
+    readfrom = 'bme680primary'
 
 # If we didn't find it on 0x76, look on 0x77
 if readfrom == 'unset':
@@ -44,7 +44,7 @@ if readfrom == 'unset':
     except IOError:
         print('BME680 not found on 0x77')
     else:
-        readfrom = 'bme680'
+        readfrom = 'bme680secondary'
 
 
 # If no BME680, is there a Sense HAT?
@@ -65,7 +65,7 @@ if readfrom == 'unset':
 else:
         print('Using BME680 for readings')
 
-        sensor = BME680()
+        sensor = BME680(readfrom)
         get_readings = sensor.get_readings
 
 

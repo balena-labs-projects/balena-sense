@@ -6,13 +6,18 @@ import io
 class BME680:
     data = None
 
-    def __init__(self):
+    def __init__(self, readfrom):
+        if readfrom == 'bme680secondary':
+            self.command = '/usr/src/app/bsec_bme680_linux/bsec_bme680 secondary'
+        else:
+            self.command = '/usr/src/app/bsec_bme680_linux/bsec_bme680'
+
         self.capture_thread = threading.Thread(target=self.capture)
         self.capture_thread.start()
 
     def capture(self):
         # Start the process and commence capture and parsing of the output
-        process = subprocess.Popen(['/usr/src/app/bsec_bme680_linux/bsec_bme680'], stdout=subprocess.PIPE)
+        process = subprocess.Popen([self.command], stdout=subprocess.PIPE)
 
         for line in io.TextIOWrapper(process.stdout, encoding="utf-8"):
             self.data = json.loads(line.strip())

@@ -7,13 +7,6 @@ The Bosch BME680 is recommended as it includes sensors for temperature, humidity
 
 As an alternative, if you have one already, you can use the Raspberry Pi Sense-HAT. This however does not include a sensor for gas content and so if you use this the air quality readout is derived from humidity and temperature target values.
 
-The sensor provides a reading for Indoor Air Quality (IAQ) which is a range from 0 to 500 where lower is better, and displays it with a web interface provided by [Grafana](https://github.com/grafana/grafana).
-
-![](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/iaq-ratings.png)
-
-![](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/iaq-screenshot.png)
-
-
 ### Hardware required
 
 ![](https://balena.io/blog/content/images/2019/03/hardware-required.jpg)
@@ -44,5 +37,16 @@ We’ve set up this project which contains all of the software, configuration an
 * Tool to flash your SD card, such as [balenaEtcher](https://www.balena.io/etcher/)
 * A [balenaCloud](https://www.balena.io/cloud/) account
 * A clone or download of this project
+
+
+### Configuration
+
+If required, this project supports offsetting of the measured values before they are recorded in the database.
+
+To offset temperature, add a balenaCloud environment variable called `BALENASENSE_TEMP_OFFSET`, and add an offset in degrees C.
+
+To offset humidity, add a balenaCloud environment variable called `BALENASENSE_HUM_OFFSET` and add a value in % RH.
+
+To adjust the pressure sensor and compensate for altitude, add a balenaCloud environment variable called `BALENASENSE_ALTITUDE` and set it to your altitude above sea level in meters.
 
 ### A full guide to setting up this project is available on [our blog](https://www.balena.io/blog/p/34fa01e1-7c1d-4fba-bb2a-b57c19d13985/).

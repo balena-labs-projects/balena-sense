@@ -7,6 +7,12 @@ The Bosch BME680 is recommended as it includes sensors for temperature, humidity
 
 As an alternative, if you have one already, you can use the Raspberry Pi Sense-HAT. This however does not include a sensor for gas content and so if you use this the air quality readout is derived from humidity and temperature target values.
 
+The sensor provides a reading for Indoor Air Quality (IAQ) which is a range from 0 to 500 where lower is better, and displays it with a web interface provided by [Grafana](https://github.com/grafana/grafana).
+
+![](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/iaq-ratings.png)
+
+![](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/iaq-screenshot.png)
+
 ### Hardware required
 
 ![](https://balena.io/blog/content/images/2019/03/hardware-required.jpg)

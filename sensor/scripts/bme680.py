@@ -9,9 +9,9 @@ class BME680:
 
     def __init__(self, readfrom):
         if readfrom == 'bme680secondary':
-            self.command = '/usr/src/app/bsec_bme680_linux/bsec_bme680 secondary'
+            self.command = ['/usr/src/app/bsec_bme680_linux/bsec_bme680', 'secondary']
         else:
-            self.command = '/usr/src/app/bsec_bme680_linux/bsec_bme680'
+            self.command = ['/usr/src/app/bsec_bme680_linux/bsec_bme680']
 
         self.capture_thread = threading.Thread(target=self.capturewrap)
         self.capture_thread.start()
@@ -24,10 +24,11 @@ class BME680:
                 print('{!r}; restarting capture thread'.format(e))
             else:
                 print('Capture thread exited; restarting')
+            time.sleep(5)
 
     def capture(self):
         # Start the process and commence capture and parsing of the output
-        process = subprocess.Popen([self.command], stdout=subprocess.PIPE)
+        process = subprocess.Popen(self.command, stdout=subprocess.PIPE)
 
         for line in io.TextIOWrapper(process.stdout, encoding="utf-8"):
             self.data = json.loads(line.strip())

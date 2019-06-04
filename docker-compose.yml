@@ -24,6 +24,7 @@ services:
     build: ./sensor
     privileged: true
     restart: always
+    volumes:
+      - 'sense-data:/data'
     depends_on:
      - influxdb
-     - grafana

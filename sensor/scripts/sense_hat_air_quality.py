@@ -1,11 +1,14 @@
 def get_readings(sensor):
     # The sense HAT does not include any way to obtain an air quality score via gas measurement,
     # so we can create one using the temperature and humidity reading based on distance from ideal values
-    temperature_ideal = 20
-    temperature_worst_variance = 20
+    max_iaq = 500
+    min_iaq = 25
+
+    temperature_ideal = 25
+    temperature_worst_variance = 40
 
     humidity_ideal = 40
-    humidity_worst_variance = 30
+    humidity_worst_variance = 40
     humidity_weighting = 0.25 # this means % of the AQ figure will be humidity, the rest will be temperature
 
     # Get the current temperature and humidity readings
@@ -25,19 +28,16 @@ def get_readings(sensor):
         current_humidity_variance = 1
 
     # Scale the current variance measurements in accordance with the weighting to calculate a percentage
-    # this gives us a score where 100 is the worst possible value
+    # this gives us a score where 1 is the worst possible value
     air_quality_score = (current_humidity_variance * humidity_weighting) + (current_temperature_variance * (1 - humidity_weighting))
-    air_quality_score = air_quality_score * 100 # convert to %
-
-    # Flip the score so that 100 is good and 0 is bad
-    air_quality_score = abs(air_quality_score - 100)
+    air_quality_score = air_quality_score * 500
 
     # As we have a sense HAT we can give an indication of the air quality on the LED matrix
     from ledmatrix import LedMatrix
 
     display = LedMatrix()
     display.clear()
-    if air_quality_score > 66:
+    if air_quality_score < 100:
         # Happy face!
         face_color = [0, 255, 0]
         face_pixels = [
@@ -50,7 +50,7 @@ def get_readings(sensor):
             0, 1, 0, 0, 0, 0, 1, 0,
             0, 0, 1, 1, 1, 1, 0, 0
         ]
-    elif air_quality_score > 33:
+    elif air_quality_score < 250:
         # Neutral face
         face_color = [250, 255, 0]
         face_pixels = [

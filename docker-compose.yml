@@ -28,3 +28,9 @@ services:
       - 'sense-data:/data'
     depends_on:
      - influxdb
+  telegraf:
+    build: ./telegraf
+    restart: always
+    depends_on:
+      - influxdb
+      - sensor

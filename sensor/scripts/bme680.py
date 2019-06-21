@@ -46,7 +46,7 @@ class BME680:
                     'pressure': float(self.data['pressure']),
                     'humidity': float(self.data['humidity']),
                     'air_quality_score': float(self.data['iaq']),
-                    'air_quality_score_accuracy': int(self.data['iaq_accuracy']),
+                    'air_quality_score_accuracy': str(self.data['iaq_accuracy']) + 'i',
                     'eco2_ppm': float(self.data['eco2_ppm']),
                     'bvoce_ppm': float(self.data['bvoce_ppm'])
                 }

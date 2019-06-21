@@ -1,6 +1,8 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine
 
-RUN apk add influxdb
+RUN curl -o /tmp/influxdb.tar.gz https://dl.influxdata.com/influxdb/releases/influxdb-1.7.6_linux_armhf.tar.gz
+RUN tar xfzv /tmp/influxdb.tar.gz -C /tmp
+RUN cp -R /tmp/influxdb-1.7.6-1/* /
 
 RUN sed -i 's|/var/lib/influxdb|/data/influxdb|g' /etc/influxdb/influxdb.conf
 

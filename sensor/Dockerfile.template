@@ -18,6 +18,7 @@ RUN pip install smbus
 
 WORKDIR /usr/src/app
 COPY ./scripts ./scripts
-COPY ./*.sh /usr/src/app/
+COPY ./entry.sh /usr/src/app/
+RUN chmod +x /usr/src/app/entry.sh
 
 CMD ./entry.sh

@@ -1,6 +1,6 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
 
-ARG BSEC_FILENAME=BSEC_1.4.7.3_Generic_Release_20190410.zip
+ARG BSEC_FILENAME=BSEC_1.4.7.4_Generic_Release.zip
 
 RUN install_packages \
         unzip

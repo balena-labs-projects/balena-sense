@@ -28,108 +28,110 @@
       "id": 10,
       "links": [],
       "options": {
-        "maxValue": "500",
-        "minValue": 0,
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "decimals": null,
+            "max": "500",
+            "min": 0,
+            "unit": "none"
+          },
+          "mappings": [
+            {
+              "from": "0",
+              "id": 1,
+              "operator": "",
+              "text": "Good",
+              "to": "50.5",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "50.5",
+              "id": 2,
+              "operator": "",
+              "text": "Moderate",
+              "to": "100.5",
+              "type": 2,
+              "value": "51"
+            },
+            {
+              "from": "100.5",
+              "id": 3,
+              "operator": "",
+              "text": "Unhealthy for sensitive groups",
+              "to": "150.5",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "150.5",
+              "id": 5,
+              "operator": "",
+              "text": "Unhealthy",
+              "to": "200.5",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "200.5",
+              "id": 6,
+              "operator": "",
+              "text": "Very unhealthy",
+              "to": "300.5",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "300.5",
+              "id": 7,
+              "operator": "",
+              "text": "Hazardous",
+              "to": "500.5",
+              "type": 2,
+              "value": "300.5"
+            }
+          ],
+          "thresholds": [
+            {
+              "color": "#00e400",
+              "index": 0,
+              "value": null
+            },
+            {
+              "color": "#ffff00",
+              "index": 1,
+              "value": 51
+            },
+            {
+              "color": "#ff7e00",
+              "index": 2,
+              "value": 101
+            },
+            {
+              "color": "rgb(255, 0, 0)",
+              "index": 3,
+              "value": 151
+            },
+            {
+              "color": "rgb(143, 63, 151)",
+              "index": 4,
+              "value": 201
+            },
+            {
+              "color": "#7e0023",
+              "index": 5,
+              "value": 301
+            }
+          ]
+        },
         "orientation": "auto",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "thresholds": [
-          {
-            "color": "#00e400",
-            "index": 0,
-            "value": null
-          },
-          {
-            "color": "#ffff00",
-            "index": 1,
-            "value": 51
-          },
-          {
-            "color": "#ff7e00",
-            "index": 2,
-            "value": 101
-          },
-          {
-            "color": "rgb(255, 0, 0)",
-            "index": 3,
-            "value": 151
-          },
-          {
-            "color": "rgb(143, 63, 151)",
-            "index": 4,
-            "value": 201
-          },
-          {
-            "color": "#7e0023",
-            "index": 5,
-            "value": 301
-          }
-        ],
-        "valueMappings": [
-          {
-            "from": "0",
-            "id": 1,
-            "operator": "",
-            "text": "Good",
-            "to": "50.5",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "50.5",
-            "id": 2,
-            "operator": "",
-            "text": "Moderate",
-            "to": "100.5",
-            "type": 2,
-            "value": "51"
-          },
-          {
-            "from": "100.5",
-            "id": 3,
-            "operator": "",
-            "text": "Unhealthy for sensitive groups",
-            "to": "150.5",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "150.5",
-            "id": 5,
-            "operator": "",
-            "text": "Unhealthy",
-            "to": "200.5",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "200.5",
-            "id": 6,
-            "operator": "",
-            "text": "Very unhealthy",
-            "to": "300.5",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "300.5",
-            "id": 7,
-            "operator": "",
-            "text": "Hazardous",
-            "to": "500.5",
-            "type": 2,
-            "value": "300.5"
-          }
-        ],
-        "valueOptions": {
-          "decimals": null,
-          "prefix": "",
-          "stat": "last",
-          "suffix": "",
-          "unit": "none"
-        }
+        "showThresholdMarkers": true
       },
-      "pluginVersion": "6.1.6",
+      "pluginVersion": "6.2.5",
       "targets": [
         {
           "groupBy": [],
@@ -183,6 +185,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -356,6 +359,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -434,6 +438,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -562,6 +567,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -640,6 +646,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -739,94 +746,95 @@
       "id": 6,
       "links": [],
       "options": {
-        "maxValue": "1160",
-        "minValue": "870",
+        "fieldOptions": {
+          "calcs": [
+            "last"
+          ],
+          "defaults": {
+            "max": 870,
+            "min": 1160,
+            "unit": "pressurembar"
+          },
+          "mappings": [
+            {
+              "from": "870",
+              "id": 1,
+              "operator": "",
+              "text": "Stormy",
+              "to": "990",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "990",
+              "id": 2,
+              "operator": "",
+              "text": "Rain",
+              "to": "1006",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "1006",
+              "id": 3,
+              "operator": "",
+              "text": "Change",
+              "to": "1025",
+              "type": 2,
+              "value": ""
+            },
+            {
+              "from": "1025",
+              "id": 4,
+              "operator": "",
+              "text": "Fair",
+              "to": "1040",
+              "type": 2,
+              "value": "1026"
+            },
+            {
+              "from": "1040",
+              "id": 5,
+              "operator": "",
+              "text": "Very Dry",
+              "to": "1084",
+              "type": 2,
+              "value": ""
+            }
+          ],
+          "thresholds": [
+            {
+              "color": "#C4162A",
+              "index": 0,
+              "value": null
+            },
+            {
+              "color": "#1F60C4",
+              "index": 1,
+              "value": 990
+            },
+            {
+              "color": "#FFF899",
+              "index": 2,
+              "value": 1006
+            },
+            {
+              "color": "#37872D",
+              "index": 3,
+              "value": 1025
+            },
+            {
+              "color": "#FFB357",
+              "index": 4,
+              "value": 1040
+            }
+          ]
+        },
         "orientation": "auto",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "thresholds": [
-          {
-            "color": "#C4162A",
-            "index": 0,
-            "value": null
-          },
-          {
-            "color": "#1F60C4",
-            "index": 1,
-            "value": 990
-          },
-          {
-            "color": "#FFF899",
-            "index": 2,
-            "value": 1006
-          },
-          {
-            "color": "#37872D",
-            "index": 3,
-            "value": 1025
-          },
-          {
-            "color": "#FFB357",
-            "index": 4,
-            "value": 1040
-          }
-        ],
-        "valueMappings": [
-          {
-            "from": "870",
-            "id": 1,
-            "operator": "",
-            "text": "Stormy",
-            "to": "990",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "990",
-            "id": 2,
-            "operator": "",
-            "text": "Rain",
-            "to": "1006",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "1006",
-            "id": 3,
-            "operator": "",
-            "text": "Change",
-            "to": "1025",
-            "type": 2,
-            "value": ""
-          },
-          {
-            "from": "1025",
-            "id": 4,
-            "operator": "",
-            "text": "Fair",
-            "to": "1040",
-            "type": 2,
-            "value": "1026"
-          },
-          {
-            "from": "1040",
-            "id": 5,
-            "operator": "",
-            "text": "Very Dry",
-            "to": "1084",
-            "type": 2,
-            "value": ""
-          }
-        ],
-        "valueOptions": {
-          "decimals": null,
-          "prefix": "",
-          "stat": "last",
-          "suffix": "",
-          "unit": "pressurembar"
-        }
+        "showThresholdMarkers": true
       },
-      "pluginVersion": "6.1.6",
+      "pluginVersion": "6.2.5",
       "targets": [
         {
           "groupBy": [],
@@ -879,6 +887,7 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {},
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -991,5 +1000,5 @@
   "timezone": "",
   "title": "balenaSense",
   "uid": "pF3gRDiRk",
-  "version": 3
+  "version": 1
 }

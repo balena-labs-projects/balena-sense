@@ -1,12 +1,13 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%:buster
 
+COPY ./*.sh /usr/src/app/
+RUN chmod +x /usr/src/app/*.sh
+
 RUN install_packages wget
 
-RUN wget -O /tmp/telegraf.deb https://dl.influxdata.com/telegraf/releases/telegraf_1.11.0-1_armhf.deb
+RUN /usr/src/app/download.sh "%%BALENA_ARCH%%"
+
 RUN dpkg -i /tmp/telegraf.deb && rm /tmp/telegraf.deb
-
 COPY telegraf.conf /etc/telegraf/telegraf.conf
-COPY entry.sh /entry.sh
-RUN chmod +x /entry.sh
 
-CMD /entry.sh
+CMD /usr/src/app/entry.sh

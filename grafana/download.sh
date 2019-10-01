@@ -1,9 +1,12 @@
 #!/bin/sh
 
-if [ "$1" = "rpi" ]; then
-	wget -O /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana-rpi_6.3.6_armhf.deb;
-elif [ "$1" = "aarch64" ]; then
-	wget -O /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana_6.3.6_arm64.deb;
-else
-	wget -O /tmp/grafana.deb https://dl.grafana.com/oss/release/grafana_6.3.6_armhf.deb;
-fi
+outfile="/tmp/grafana.deb"
+download_base="https://dl.grafana.com/oss/release/"
+case $1 in
+   rpi)  package_file="grafana-rpi_6.3.6_armhf.deb"
+       ;;
+   aarch64) package_file="grafana_6.3.6_arm64.deb"
+       ;;
+    *) package_file="grafana_6.3.6_armhf.deb"
+esac
+wget -O "${outfile}" "${download_base}${package_file}"

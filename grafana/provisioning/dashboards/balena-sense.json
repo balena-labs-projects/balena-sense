@@ -15,6 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -34,104 +35,100 @@
           ],
           "defaults": {
             "decimals": null,
+            "mappings": [
+              {
+                "from": "0",
+                "id": 1,
+                "operator": "",
+                "text": "Good",
+                "to": "50.5",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "50.5",
+                "id": 2,
+                "operator": "",
+                "text": "Moderate",
+                "to": "100.5",
+                "type": 2,
+                "value": "51"
+              },
+              {
+                "from": "100.5",
+                "id": 3,
+                "operator": "",
+                "text": "Unhealthy for sensitive groups",
+                "to": "150.5",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "150.5",
+                "id": 5,
+                "operator": "",
+                "text": "Unhealthy",
+                "to": "200.5",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "200.5",
+                "id": 6,
+                "operator": "",
+                "text": "Very unhealthy",
+                "to": "300.5",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "300.5",
+                "id": 7,
+                "operator": "",
+                "text": "Hazardous",
+                "to": "500.5",
+                "type": 2,
+                "value": "300.5"
+              }
+            ],
             "max": "500",
             "min": 0,
+            "thresholds": [
+              {
+                "color": "#00e400",
+                "value": null
+              },
+              {
+                "color": "#ffff00",
+                "value": 51
+              },
+              {
+                "color": "#ff7e00",
+                "value": 101
+              },
+              {
+                "color": "rgb(255, 0, 0)",
+                "value": 151
+              },
+              {
+                "color": "rgb(143, 63, 151)",
+                "value": 201
+              },
+              {
+                "color": "#7e0023",
+                "value": 301
+              }
+            ],
             "unit": "none"
           },
-          "mappings": [
-            {
-              "from": "0",
-              "id": 1,
-              "operator": "",
-              "text": "Good",
-              "to": "50.5",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "50.5",
-              "id": 2,
-              "operator": "",
-              "text": "Moderate",
-              "to": "100.5",
-              "type": 2,
-              "value": "51"
-            },
-            {
-              "from": "100.5",
-              "id": 3,
-              "operator": "",
-              "text": "Unhealthy for sensitive groups",
-              "to": "150.5",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "150.5",
-              "id": 5,
-              "operator": "",
-              "text": "Unhealthy",
-              "to": "200.5",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "200.5",
-              "id": 6,
-              "operator": "",
-              "text": "Very unhealthy",
-              "to": "300.5",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "300.5",
-              "id": 7,
-              "operator": "",
-              "text": "Hazardous",
-              "to": "500.5",
-              "type": 2,
-              "value": "300.5"
-            }
-          ],
-          "thresholds": [
-            {
-              "color": "#00e400",
-              "index": 0,
-              "value": null
-            },
-            {
-              "color": "#ffff00",
-              "index": 1,
-              "value": 51
-            },
-            {
-              "color": "#ff7e00",
-              "index": 2,
-              "value": 101
-            },
-            {
-              "color": "rgb(255, 0, 0)",
-              "index": 3,
-              "value": 151
-            },
-            {
-              "color": "rgb(143, 63, 151)",
-              "index": 4,
-              "value": 201
-            },
-            {
-              "color": "#7e0023",
-              "index": 5,
-              "value": 301
-            }
-          ]
+          "override": {},
+          "values": false
         },
         "orientation": "auto",
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.2.5",
+      "pluginVersion": "6.3.6",
       "targets": [
         {
           "groupBy": [],
@@ -164,6 +161,7 @@
       "dashLength": 10,
       "dashes": false,
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 12,
@@ -185,7 +183,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -418,6 +418,7 @@
       "dashLength": 10,
       "dashes": false,
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 5,
         "w": 14,
@@ -438,7 +439,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -626,6 +629,7 @@
       "dashLength": 10,
       "dashes": false,
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 5,
         "w": 14,
@@ -646,7 +650,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -751,90 +757,87 @@
             "last"
           ],
           "defaults": {
+            "mappings": [
+              {
+                "from": "870",
+                "id": 1,
+                "operator": "",
+                "text": "Stormy",
+                "to": "990",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "990",
+                "id": 2,
+                "operator": "",
+                "text": "Rain",
+                "to": "1006",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "1006",
+                "id": 3,
+                "operator": "",
+                "text": "Change",
+                "to": "1025",
+                "type": 2,
+                "value": ""
+              },
+              {
+                "from": "1025",
+                "id": 4,
+                "operator": "",
+                "text": "Fair",
+                "to": "1040",
+                "type": 2,
+                "value": "1026"
+              },
+              {
+                "from": "1040",
+                "id": 5,
+                "operator": "",
+                "text": "Very Dry",
+                "to": "1084",
+                "type": 2,
+                "value": ""
+              }
+            ],
             "max": 870,
             "min": 1160,
+            "thresholds": [
+              {
+                "color": "#C4162A",
+                "value": null
+              },
+              {
+                "color": "#1F60C4",
+                "value": 990
+              },
+              {
+                "color": "#FFF899",
+                "value": 1006
+              },
+              {
+                "color": "#37872D",
+                "value": 1025
+              },
+              {
+                "color": "#FFB357",
+                "value": 1040
+              }
+            ],
             "unit": "pressurembar"
           },
-          "mappings": [
-            {
-              "from": "870",
-              "id": 1,
-              "operator": "",
-              "text": "Stormy",
-              "to": "990",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "990",
-              "id": 2,
-              "operator": "",
-              "text": "Rain",
-              "to": "1006",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "1006",
-              "id": 3,
-              "operator": "",
-              "text": "Change",
-              "to": "1025",
-              "type": 2,
-              "value": ""
-            },
-            {
-              "from": "1025",
-              "id": 4,
-              "operator": "",
-              "text": "Fair",
-              "to": "1040",
-              "type": 2,
-              "value": "1026"
-            },
-            {
-              "from": "1040",
-              "id": 5,
-              "operator": "",
-              "text": "Very Dry",
-              "to": "1084",
-              "type": 2,
-              "value": ""
-            }
-          ],
-          "thresholds": [
-            {
-              "color": "#C4162A",
-              "index": 0,
-              "value": null
-            },
-            {
-              "color": "#1F60C4",
-              "index": 1,
-              "value": 990
-            },
-            {
-              "color": "#FFF899",
-              "index": 2,
-              "value": 1006
-            },
-            {
-              "color": "#37872D",
-              "index": 3,
-              "value": 1025
-            },
-            {
-              "color": "#FFB357",
-              "index": 4,
-              "value": 1040
-            }
-          ]
+          "override": {},
+          "values": false
         },
         "orientation": "auto",
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "6.2.5",
+      "pluginVersion": "6.3.6",
       "targets": [
         {
           "groupBy": [],
@@ -865,6 +868,7 @@
       "dashLength": 10,
       "dashes": false,
       "fill": 1,
+      "fillGradient": 0,
       "gridPos": {
         "h": 5,
         "w": 14,
@@ -887,7 +891,9 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
-      "options": {},
+      "options": {
+        "dataLinks": []
+      },
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -938,9 +944,9 @@
       },
       "yaxes": [
         {
-          "decimals": null,
-          "format": "pressurembar",
-          "label": "",
+          "decimals": 2,
+          "format": "none",
+          "label": "mbar",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -962,7 +968,7 @@
     }
   ],
   "refresh": "10s",
-  "schemaVersion": 18,
+  "schemaVersion": 19,
   "style": "dark",
   "tags": [],
   "templating": {

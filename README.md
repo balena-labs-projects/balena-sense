@@ -1,11 +1,13 @@
 ![](https://balena.io/blog/content/images/2019/03/balenasense-logo.png)
 ![](https://balena.io/blog/content/images/2019/03/balenaSense_blog.jpg)
 
-A Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project taking readings from a **either a Bosch BME680 sensor or a Sense-HAT**, storing using InfluxDB and reporting using Grafana.
+A Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project taking readings from a **either a Bosch BME680 sensor, a Sense-HAT, or a 1-wire temperature sensor (such as a Dallas DS18B20)**, storing using InfluxDB and reporting using Grafana.
 
 The Bosch BME680 is recommended as it includes sensors for temperature, humidity, pressure and gas content and is available on a breakout board from a few different places for around $10-$20.
 
 As an alternative, if you have one already, you can use the Raspberry Pi Sense-HAT. This however does not include a sensor for gas content and so if you use this the air quality readout is derived from humidity and temperature target values.
+
+If you have neither a BME680 nor a Sense-HAT, or if you only need temperature readings, you can use a so-called 1-wire sensor, such as the DS18B20. Air quality metrics are not available with these sensors.
 
 The sensor provides a reading for Indoor Air Quality (IAQ) which is a range from 0 to 500 where lower is better, and displays it with a web interface provided by [Grafana](https://github.com/grafana/grafana).
 
@@ -24,9 +26,10 @@ Here’s the shopping list for this project. Depending if you’d like to crack 
 * Power supply & micro-USB cable
 * Bosch BME680 sensor with breakout board (see below for places to find one) or...
 * **Optional:** Sense HAT (optional replacement for the BME680, but does not include an air quality sensor)
+* **Optional:** 1-wire temperature sensor (temperature only)
 * **Optional:** Male-to-female Dupont cables (optional)
 
-You can get hold of the Bosch BME680 sensor on a breakout board from a variety of vendors too, all at varying costs. If you’d like to do everything without a soldering iron, take a look at Pimoroni, who offer a [BME680 breakout board](https://shop.pimoroni.com/products/bme680-breakout) compatible with their [breakout garden HAT](https://shop.pimoroni.com/products/breakout-garden-hat) so that everything plugs together with no soldering required. If you don't want to do any soldering and are happy to sacrifice the air quality reading, you can also use the [Sense HAT](https://shop.pimoroni.com/products/raspberry-pi-sense-hat), with the added bonus that you'll get a smiley face showing on the LED matrix! However, if you're buying hardware specifically for this project, get one of the BME680 options below, don't buy a Sense-HAT just for this!
+You can get hold of the Bosch BME680 sensor on a breakout board from a variety of vendors too, all at varying costs. If you’d like to do everything without a soldering iron, take a look at Pimoroni, who offer a [BME680 breakout board](https://shop.pimoroni.com/products/bme680-breakout) compatible with their [breakout garden HAT](https://shop.pimoroni.com/products/breakout-garden-hat) so that everything plugs together with no soldering required. If you don't want to do any soldering and are happy to sacrifice the air quality reading, you can also use the [Sense HAT](https://shop.pimoroni.com/products/raspberry-pi-sense-hat), with the added bonus that you'll get a smiley face showing on the LED matrix! However, if you're buying hardware specifically for this project, get one of the BME680 options below, don't buy a Sense-HAT just for this! If you only need temperature readings, you can find DS18B20 1-wire sensors readily available on eBay (and much cheaper than the BME680 or Sense-HAT), with minimal soldering required.
 
 If you’re happy to do a little soldering, that opens up a few more options:
 
@@ -34,6 +37,7 @@ If you’re happy to do a little soldering, that opens up a few more options:
 * [Adafruit BME680 breakout](https://www.adafruit.com/product/3660) US$22.50
 * [Sparkfun SparkX BME680](https://www.sparkfun.com/products/14570) US$19.95 (can be solder-free with [their HAT](https://www.sparkfun.com/products/14459))
 * [Unbranded BME680 breakout](https://www.aliexpress.com/item/BME680-Digital-Temperature-Humidity-Pressure-Sensor-CJMCU-680-High-Altitude-Sensor-Module-Development-Board/32961416338.html) US$9.92
+* [Dallas DS18B20 1-wire temperature sensor](https://thepihut.com/products/ds18b20-one-wire-digital-temperature-sensor) £4.00 (The Pi Hut also has a [guide to soldering/wiring up these sensors](https://thepihut.com/blogs/raspberry-pi-tutorials/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi), alternatively, DS18B20 sensors in a waterproof casing with flying leads attached are readily available on eBay or similar)
 
 
 ### Software required
@@ -55,6 +59,20 @@ To offset temperature, add a balenaCloud environment variable called `BALENASENS
 To offset humidity, add a balenaCloud environment variable called `BALENASENSE_HUM_OFFSET` and add a value in % RH.
 
 To adjust the pressure sensor and compensate for altitude, add a balenaCloud environment variable called `BALENASENSE_ALTITUDE` and set it to your altitude above sea level in meters.
+
+#### Using 1-wire sensors
+To use 1-wire sensors such as the DS18B20 on the Raspberry Pi, you'll need to enable the 1-wire GPIO interface by adding the `w1-gpio` device tree overlay. Information on the 1-wire interface is available at [pinout.xyz](https://pinout.xyz/pinout/1_wire), but in the case of BalenaOS, you can do this easily in the Device Configuration section of the BalenaCloud dashboard by adding a custom configuration variable called `RESIN_HOST_CONFIG_dtoverlay`, with value `w1-gpio`.
+
+More information about device tree overlays and other advanced boot settings for the Raspberry Pi is available in the [BalenaOS docs](https://www.balena.io/docs/reference/OS/advanced/) and [BalenaCloud management reference section](https://www.balena.io/docs/learn/manage/configuration/).
+
+##### Hardware setup
+
+[The Pi Hut guide to using a DS18B20 sensor with a Raspberry Pi](https://thepihut.com/blogs/raspberry-pi-tutorials/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi) shows how to wire these sensors up. Don't forget you'll need a pullup resistor between the Vin and data lines.
+
+##### Multiple 1-wire sensors on one device
+1-wire devices each have a unique ID; if you have more than one sensor attached to your Raspberry Pi, it is possible to select which one to use by setting the `BALENASENSE_1WIRE_SENSOR_ID` device variable in BalenaCloud. If no ID is given, the first sensor found will be used.
+
+For more information about how to find the ID for 1-wire devices, the Pi Hut guide referenced above, or [this Raspberry Pi tutorial](https://tutorials-raspberrypi.com/raspberry-pi-temperature-sensor-1wire-ds18b20/) are useful.
 
 #### Data outputs
 Versions of balenaSense after v1.5 introduce [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) to capture the data from the sensor which permits the feed of data to other sources in addition to the internal InfluxDB instance.

@@ -16,6 +16,7 @@ RUN chmod +x make.sh
 RUN ./make.sh
 
 RUN pip install smbus
+RUN pip install w1thermsensor
 
 WORKDIR /usr/src/app
 COPY ./scripts ./scripts

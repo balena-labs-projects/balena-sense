@@ -4,7 +4,7 @@ Contributions are welcome!
 
 ## Semantic versioning and commit messages
 
-The balenaDash version numbering adheres to [Semantic Versioning](http://semver.org/). The following
+The balenaSense version numbering adheres to [Semantic Versioning](http://semver.org/). The following
 header/row is required in the body of a commit message, and will cause the CI build to fail if absent:
 
 ```

@@ -1,4 +1,5 @@
-![](https://balena.io/blog/content/images/2019/03/balenasense-logo.png)
+![balena-sense](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/logo.png)
+
 ![](https://balena.io/blog/content/images/2019/03/balenaSense_blog.jpg)
 
 A Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project taking readings from a **either a Bosch BME680 sensor, a Sense-HAT, or a 1-wire temperature sensor (such as a Dallas DS18B20)**, storing using InfluxDB and reporting using Grafana.

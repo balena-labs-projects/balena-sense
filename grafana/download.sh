@@ -7,6 +7,6 @@ case $1 in
        ;;
    aarch64) package_file="grafana_6.3.6_arm64.deb"
        ;;
-    *) package_file="grafana_6.3.6_armhf.deb"
+   *) package_file="grafana_6.3.6_armhf.deb"
 esac
 wget -O "${outfile}" "${download_base}${package_file}"

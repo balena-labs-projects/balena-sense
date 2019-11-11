@@ -10,4 +10,4 @@ RUN /usr/src/app/download.sh "%%BALENA_ARCH%%"
 RUN dpkg -i /tmp/telegraf.deb && rm /tmp/telegraf.deb
 COPY telegraf.conf /etc/telegraf/telegraf.conf
 
-CMD /usr/src/app/entry.sh
+CMD ["bash","/usr/src/app/entry.sh"]

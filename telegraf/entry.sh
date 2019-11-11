@@ -23,4 +23,4 @@ else
   sed -i '/InternalInfluxDB/,/EndInternalInfluxDB/ { s/^##*//; s/^ InternalInfluxDB$/# InternalInfluxDB/; s/^ EndInternalInfluxDB/# EndInternalInfluxDB/ }' /etc/telegraf/telegraf.conf
 fi
 
-telegraf
+exec telegraf

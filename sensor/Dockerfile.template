@@ -23,4 +23,4 @@ COPY ./scripts ./scripts
 COPY ./entry.sh /usr/src/app/
 RUN chmod +x /usr/src/app/entry.sh
 
-CMD ./entry.sh
+CMD ["./entry.sh"]

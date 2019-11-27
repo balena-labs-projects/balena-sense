@@ -27,3 +27,7 @@ services:
   telegraf:
     build: ./telegraf
     restart: always
+  mqtt:
+    image: arm32v6/eclipse-mosquitto
+    ports:
+      - "1883:1883"

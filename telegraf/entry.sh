@@ -35,4 +35,10 @@ else
   sed -i '/InternalInfluxDB/,/EndInternalInfluxDB/ { s/^##*//; s/^ InternalInfluxDB$/# InternalInfluxDB/; s/^ EndInternalInfluxDB/# EndInternalInfluxDB/ }' /etc/telegraf/telegraf.conf
 fi
 
+#Rename this container's hostname
+hn=$BALENA_DEVICE_UUID
+hp=$(echo $hn | cut -c1-7)
+echo 'Changing hostname to '$hp
+hostname $hp
+
 exec telegraf

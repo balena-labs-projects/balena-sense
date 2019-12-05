@@ -96,7 +96,7 @@ Versions of balenaSense after v1.7 have an integrated MQTT broker available on p
 * ip:port - Set to the IP address and port (for instance 192.168.1.100:1883) of an MQTT broker on your network and Telegraf will publish the data to that address (Do not prepend with "mqtt://")
 * empty - Set the variable to an empty value or delete it to prevent Telegraf from publishing the sensor data via MQTT (this is the default state)
 
-The MQTT topic will be published in the format balena-sense/(hostname)/balena-sense and the data will be in JSON format. Since the hostname will change every time the container is restarted, you can subscribe to it using a wildcard such as: balena-sense/+/balena-sense .
+The MQTT topic will be published in the format balena-sense/(hostname)/balena-sense and the data will be in JSON format. The default hostname is the first seven characters of the unique device UUID, available on the dashboard. Note that if you change the hostname, the topic will still use the first seven characters of the device UUID.
 
 ##### Multiple sensors
 If you're feeding to one of the above services and have multiple sensors, you can add the `BALENASENSE_ID` variable to each of your devices. This will then be passed to the output database along with the measurements, allowing you to filter and plot metrics from each device individually.

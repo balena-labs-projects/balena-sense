@@ -27,6 +27,8 @@ services:
   telegraf:
     build: ./telegraf
     restart: always
+    cap_add:
+      - SYS_ADMIN
   mqtt:
     image: arm32v6/eclipse-mosquitto
     ports:

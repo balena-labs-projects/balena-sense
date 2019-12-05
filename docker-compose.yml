@@ -33,3 +33,4 @@ services:
     image: arm32v6/eclipse-mosquitto
     ports:
       - "1883:1883"
+    restart: always

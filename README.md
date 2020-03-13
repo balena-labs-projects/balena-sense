@@ -28,7 +28,7 @@ Here’s the shopping list for this project. Depending if you’d like to crack 
 * Bosch BME680 sensor with breakout board (see below for places to find one) or...
 * **Optional:** Sense HAT (optional replacement for the BME680, but does not include an air quality sensor)
 * **Optional:** 1-wire temperature sensor (temperature only)
-* **Optional:** [Pimoroni Enviro+ Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171)
+* **Optional:** [Pimoroni Enviro+ Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) (only supports Temp, Humidity, Pressure, Light (Lux), NH3, Oxidising and Reducing Gases currently)
 * **Optional:** Male-to-female Dupont cables (optional)
 
 You can get hold of the Bosch BME680 sensor on a breakout board from a variety of vendors too, all at varying costs. If you’d like to do everything without a soldering iron, take a look at Pimoroni, who offer a [BME680 breakout board](https://shop.pimoroni.com/products/bme680-breakout) compatible with their [breakout garden HAT](https://shop.pimoroni.com/products/breakout-garden-hat) so that everything plugs together with no soldering required. If you don't want to do any soldering and are happy to sacrifice the air quality reading, you can also use the [Sense HAT](https://shop.pimoroni.com/products/raspberry-pi-sense-hat), with the added bonus that you'll get a smiley face showing on the LED matrix! However, if you're buying hardware specifically for this project, get one of the BME680 options below, don't buy a Sense-HAT just for this! If you only need temperature readings, you can find DS18B20 1-wire sensors readily available on eBay (and much cheaper than the BME680 or Sense-HAT), with minimal soldering required.

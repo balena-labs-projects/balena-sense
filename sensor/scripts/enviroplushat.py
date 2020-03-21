@@ -44,17 +44,19 @@ class ENVIROPLUS:
         current_oxidising = current_gas.oxidising / 1000
         current_reducing = current_gas.reducing / 1000
         current_nh3 = current_gas.nh3 / 1000
-
+        PM_FAILURE = False
+        
         try:
             pm_data = self.pms5003.read()
         except pmsReadTimeoutError:
-            logging.warn("Failed to read PMS5003")
+            PM_FAILURE = True
+            print("Failed to read PMS5003")
         else:
             pm1 = pm_data.pm_ug_per_m3(1.0)
             pm2 = pm_data.pm_ug_per_m3(2.5)
             pm10= pm_data.pm_ug_per_m3(10.0)
 
-        if "ENVIRO_PLUS_PM" in os.environ:
+        if "ENVIRO_PLUS_PM" in os.environ and PM_FAILURE != True:
             return [
                 {
                     'measurement': 'balena-sense',

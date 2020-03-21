@@ -28,7 +28,7 @@ Here’s the shopping list for this project. Depending if you’d like to crack 
 * Bosch BME680 sensor with breakout board (see below for places to find one) or...
 * **Optional:** Sense HAT (optional replacement for the BME680, but does not include an air quality sensor)
 * **Optional:** 1-wire temperature sensor (temperature only)
-* **Optional:** [Pimoroni Enviro+ Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) (only supports Temp, Humidity, Pressure, Light (Lux), NH3, Oxidising and Reducing Gases currently)
+* **Optional:** [Pimoroni Enviro+ Air Quality](https://shop.pimoroni.com/products/enviro?variant=31155658457171) (supports Temp, Humidity, Pressure, Light (Lux), NH3, Oxidising and Reducing Gases, particulate matter)
 * **Optional:** Male-to-female Dupont cables (optional)
 
 You can get hold of the Bosch BME680 sensor on a breakout board from a variety of vendors too, all at varying costs. If you’d like to do everything without a soldering iron, take a look at Pimoroni, who offer a [BME680 breakout board](https://shop.pimoroni.com/products/bme680-breakout) compatible with their [breakout garden HAT](https://shop.pimoroni.com/products/breakout-garden-hat) so that everything plugs together with no soldering required. If you don't want to do any soldering and are happy to sacrifice the air quality reading, you can also use the [Sense HAT](https://shop.pimoroni.com/products/raspberry-pi-sense-hat), with the added bonus that you'll get a smiley face showing on the LED matrix! However, if you're buying hardware specifically for this project, get one of the BME680 options below, don't buy a Sense-HAT just for this! If you only need temperature readings, you can find DS18B20 1-wire sensors readily available on eBay (and much cheaper than the BME680 or Sense-HAT), with minimal soldering required.
@@ -66,6 +66,16 @@ To adjust the pressure sensor and compensate for altitude, add a balenaCloud env
 To use 1-wire sensors such as the DS18B20 on the Raspberry Pi, you'll need to enable the 1-wire GPIO interface by adding the `w1-gpio` device tree overlay. Information on the 1-wire interface is available at [pinout.xyz](https://pinout.xyz/pinout/1_wire), but in the case of BalenaOS, you can do this easily in the Device Configuration section of the BalenaCloud dashboard by adding a custom configuration variable called `RESIN_HOST_CONFIG_dtoverlay`, with value `w1-gpio`.
 
 More information about device tree overlays and other advanced boot settings for the Raspberry Pi is available in the [BalenaOS docs](https://www.balena.io/docs/reference/OS/advanced/) and [BalenaCloud management reference section](https://www.balena.io/docs/learn/manage/configuration/).
+
+##### Using Enviro+ with Particulate Matter sensor
+
+The PM sensor by default uses the Raspberry Pi's UART serial, so currently this will **ONLY WORK** on `.prod` versions of balenaOS. `.dev` versions won't work because they have serial getty connected on the pi UART.
+
+To enable PM sensor on a `.prod` balenaOS device you need to set the following configuration.
+- Add a service variable on the `sensor` service called `ENVIRO_PLUS_PM` and set with a value of anything e.g. `1`
+- Add `BALENA_HOST_CONFIG_dtoverlay` to your device configuration on the dashboard and set it with a value of `pi3-miniuart-bt` 
+
+Once deployed you can click on `Dashboards > Manage` and then select `EnviroPlus-PM` dashboard to view all the data.
 
 ##### Hardware setup
 

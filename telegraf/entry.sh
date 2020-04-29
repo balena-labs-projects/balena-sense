@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ -z $INFLUX_TOKEN || -z $INFLUX_ORG || -z $INFLUX_BUCKET ]]; then
+if [[ -z $INFLUX_TOKEN || -z $INFLUX_ORG || -z $INFLUX_BUCKET || -z $INFLUX_CLOUD_URL ]]; then
   echo 'One or more InfluxDB Cloud variables are undefined - cloud disabled'
   sed -i '/InfluxDBCloud/,/EndInfluxDBCloud/ s/^#*/#/' /etc/telegraf/telegraf.conf
 else

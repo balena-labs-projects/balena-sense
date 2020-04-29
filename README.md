@@ -44,12 +44,11 @@ If you’re happy to do a little soldering, that opens up a few more options:
 
 ### Software required
 
-We’ve set up this project which contains all of the software, configuration and code you’ll need to start taking readings straight away. We’re going to deploy this project on [balenaCloud](https://www.balena.io/cloud/) using a free account to push the project and all the software to your Raspberry Pi as well as to provide remote access. Therefore, you’ll need:
+Running this project is as simple as deploying it to a balenaCloud application.
 
-* Tool to flash your SD card, such as [balenaEtcher](https://www.balena.io/etcher/)
-* A [balenaCloud](https://www.balena.io/cloud/) account
-* A clone or download of this project
+One-click deploy to balenaCloud:
 
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
 
 ### Configuration
 

@@ -1,4 +1,8 @@
 def get_readings(sensor):
+    # As we have a sense HAT we can give an indication of the air quality on the LED matrix
+    from ledmatrix import LedMatrix
+    from lps25h import Lps25hsensor
+    
     # The sense HAT does not include any way to obtain an air quality score via gas measurement,
     # so we can create one using the temperature and humidity reading based on distance from ideal values
     max_iaq = 500
@@ -32,8 +36,9 @@ def get_readings(sensor):
     air_quality_score = (current_humidity_variance * humidity_weighting) + (current_temperature_variance * (1 - humidity_weighting))
     air_quality_score = air_quality_score * 500
 
-    # As we have a sense HAT we can give an indication of the air quality on the LED matrix
-    from ledmatrix import LedMatrix
+    # Get a pressure reading from the LPS25H on the sense hat at 0x5c
+    pressure_sensor = Lps25hsensor()
+    current_pressure = pressure_sensor.read()
 
     display = LedMatrix()
     display.clear()
@@ -90,7 +95,7 @@ def get_readings(sensor):
             'measurement': 'balena-sense',
             'fields': {
                 'temperature': float(current_temperature),
-                # 'pressure': float(sensor.environ.pressure),
+                'pressure': float(current_pressure),
                 'humidity': float(current_humidity),
                 'air_quality_score': float(air_quality_score)
             }

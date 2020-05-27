@@ -1,51 +1,4 @@
-![balena-sense](https://raw.githubusercontent.com/balena-io-projects/balena-sense/master/images/logo.png)
-
-**Starter project enabling repeatable and collaborative environmental monitoring and comparison both locally and globally.**
-
-# Highlights
-
-- **Monitor temperature, humidity, and air quality**: Supports a variety of sensors to build your own monitoring system for your environment.
-- **Visualize data from one remote dashboard**: Access your environmental data from one dashboard from anywhere.
-- **Compatible with other automation tools**: Integrate balenaSense with home automation tools, e.g. Home Assistant
-
-![](https://balena.io/blog/content/images/2019/03/balenaSense_blog.jpg)
-
-# Setup and configuration
-
-Run balenaSense quickly by deploying it to a balenaCloud application. Login and deploy the application with just one click by using the button below:
-
-[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sense)
-
-# Documentation 
-
-Head over to our [docs](https://sense.balenalabs.io) for detailed installation and usage instructions, customization options and more!
-
-# Motivation
-
-![](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/sound.png)
-
-There are many commercial solutions out there that provide functionality similar to balenaSound. Most of them though come with a premium price tag and are riddled with privacy concerns. 
-
-balenaSound is an open source project that allows you to build your own DIY audio streaming platform without compromises. Why spend big money on hardware that might be deemed obsolete by the vendor as they see fit? With balenaSound you are in control, bring your old speakers back to life!
-
-This project is in active development so if you have any feature requests or issues please submit them here on GitHub. PRs are welcome, too.
-
-# Getting Help
-
-If you're having any problem, please [raise an issue](https://github.com/balenalabs/balena-sound/issues/new) on GitHub and we will be happy to help.
-
-# Contributing
-
-Do you want to help make balenaSound better? Take a look at our [Contributing Guide](https://sound.balenalabs.io/contributing). Hope to
-see you around!
-
-# License
-
-balenaSound is free software, and may be redistributed under the terms specified in the [license](https://github.com/balenalabs/balena-sound/blob/master/LICENSE).
-
-
-
-
+# Getting started
 
 A Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project taking readings from a **either a Bosch BME680 sensor, a Sense-HAT, or a 1-wire temperature sensor (such as a Dallas DS18B20)**, storing using InfluxDB and reporting using Grafana.
 
@@ -150,3 +103,9 @@ If you're feeding to one of the above services and have multiple sensors, you ca
 A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/p/34fa01e1-7c1d-4fba-bb2a-b57c19d13985/).
 
 We published an additional blog covering the setup of a fleet of balenaSense devices to feed to a central database on [our blog here](https://www.balena.io/blog/p/474400e0-e1f7-4c08-b5b3-e993fd12bda9/).
+
+## One-click application creation and deploy
+
+You can use the previous steps to deploy this project and learn more about balena CLI. For a faster path, try our one-button deploy. Once you have a balenaCloud account set up, click this button to go straight to application creation, where balenaSound will be pre-loaded to your application:
+
+[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sound)

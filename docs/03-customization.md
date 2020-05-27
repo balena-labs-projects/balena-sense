@@ -1,48 +1,27 @@
-# Customizations
+# Customization
 
-You can configure some features of balenaSound by using environment variables. This can be set in the balena dashboard: 
-```
-navigate to dashboard -> your app -> Environment variables. 
-```
+## Adding support for various sensors
+We encourage contributors to add code to extend our supported sensors. Please review [existing issues](https://github.com/balenalabs/balena-sense/issues) to see which sensors and types are currently being worked on. We'll eventually build a list of compatible sensors.
 
-![Setting the device name](https://raw.githubusercontent.com/balenalabs/balena-sound/master/images/device-name-config.png)
+## Feeding to InfluxDB cloud 2.0
+Configure the following environment variables within the balenaCloud dashboard to enable the feed to the InfluxDB Cloud 2.0 service:
+* `INFLUX_BUCKET` - the name of the bucket you created
+* `INFLUX_ORG` - your login email address used for InfluxDB cloud
+* `INFLUX_TOKEN` - the read/write token for your bucket
 
-You can read more about environment variables [here](https://www.balena.io/docs/learn/manage/serv-vars/#fleet-environment-and-service-variables).
+## Feeding to an external InfluxDB instance
+Configure the following environment variables within the balenaCloud dashboard to enable a feed to an external InfluxDB instance:
+* `INFLUXDB_EXTERNAL_URL` - the HTTP URL to your InfluxDB instance
+* `INFLUXDB_EXTERNAL_USERNAME` - the username for authentication to your InfluxDB instance
+* `INFLUXDB_EXTERNAL_PASSWORD` - the password for authentication to your InfluxDB instance
 
-## Change device name
+## Output to MQTT
+Versions of balenaSense after v1.7 have an integrated MQTT broker available on port 1883. You can configure Telegraf to output the sensor data using MQTT by setting the `TELEGRAF_MQTT_URL_PORT` environment variable as follows:
+* INTERNAL - Telegraf will send the sensor data to the internal MQTT broker, which other devices on your network can subscribe to and obtain the data
+* ip:port - Set to the IP address and port (for instance 192.168.1.100:1883) of an MQTT broker on your network and Telegraf will publish the data to that address (Do not prepend with "mqtt://")
+* empty - Set the variable to an empty value or delete it to prevent Telegraf from publishing the sensor data via MQTT (this is the default state)
 
-By default, your device will be named `balenaSound xxxx`. This name will show within Airplay device lists, for Spotify Connect, and when searching for devices using Bluetooth.
-You can change this using `DEVICE_NAME` environment variable that can be set in balena dashboard.
+The MQTT topic will be published in the format balena-sense/(hostname)/balena-sense and the data will be in JSON format. The default hostname is the first seven characters of the unique device UUID, available on the dashboard. Note that if you change the hostname, the topic will still use the first seven characters of the device UUID.
 
-## Set output volumes
-
-By default, balenaSound will set the output volume of your Raspberry Pi to 75% on the basis you can then control the volume upto the maximum from the connected bluetooth device. If you would like to override this, define the `SYSTEM_OUTPUT_VOLUME` environment variable.
-
-Secondly, balenaSound will play connection/disconnection notification sounds at a volume of 75%. If this unsuitable, you can override this with the `CONNECTION_NOTIFY_VOLUME` environment variable.
-
-**Note:** these variables should be defined as integer values without the `%` symbol.
-
-## Disable multi-room
-
-By default, balenaSound will start in multi-room mode. When running multi-room you can stream audio into a fleet of devices and have it play perfectly synchronized. It does not matter wether you have 2 or 100 devices, you only need them to be part of the same local network.
-
-If you don't want to use multi-room or you only have one device, you can disable it by creating the `DISABLE_MULTI_ROOM` variable (with any value, for example: `1`).
-
-**Note:** Multi-room requires a network router that supports IP multicast/broadcast (most modern routers do).
-
-## Set bluetooth PIN code
-
-By default, balenaSound bluetooth will connect using Secure Simple Pairing mode. If you would like to override this and use Legacy Mode with a PIN code you can do it by defining the `BLUETOOTH_PIN_CODE` environment variable. The PIN code must be numeric and up to six digits (1 - 999999).
-
-**Note**: Legacy Mode is no longer allowed on [iOS](https://developer.apple.com/accessories/Accessory-Design-Guidelines.pdf) devices.
-
-## Add bluetooth event scripts
-
-balenaSound has configurable scripts you can run on connect and disconnect bluetooth events. If you would like to activate this, set the  `BLUETOOTH_SCRIPTS` environment variable to `true`.
-Sample scripts can be found on the `./bluetooth-audio/bluetooh-scripts/` directory, theses can be edited as needed.
-
-## Spotify Connect Credentials
-
-Spotify Connect only works with Spotify Premium accounts (due to the use of the [librespot](https://github.com/librespot-org/librespot) library).
-If you have a Spotify Premium account, you can stream locally without any configuration. If you want to use Spotify Connect over the internet, you'll need to provide your Spotify credentials.
-To enable Spotify login you can add your username/e-mail and password, which are set with two environment variables: `SPOTIFY_LOGIN` and `SPOTIFY_PASSWORD`.
+## Multiple sensors
+If you're feeding to one of the above services and have multiple sensors, you can add the `BALENASENSE_ID` variable to each of your devices. This will then be passed to the output database along with the measurements, allowing you to filter and plot metrics from each device individually.

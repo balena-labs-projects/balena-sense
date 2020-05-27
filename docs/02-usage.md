@@ -1,16 +1,29 @@
 # Usage
 
-After the application has pushed and the device has downloaded the latest changes, you're ready to go! 
-Before starting, connect the audio output of your Pi to the AUX input on your Hi-Fi or speakers. You can also use the HDMI port for digital audio output.
+## Configuration
 
-To connect to your balenaSound device:
-* If using Bluetooth: search for your device on your phone or laptop and pair.
-* If using Airplay: select the balenaSound device from your audio output options.
-* If using Spotify Connect: open Spotify and choose the balenaSound device as an alternate output.
-* The `balenaSound xxxx` name is used by default, where `xxxx` will be the first 4 characters of the device ID in the balenaCloud dashboard.
+### Sensor offsets
+If required, this project supports offsetting of the measured values before they are recorded in the database.
 
-If you are running in multi-room mode, the device that starts the stream will configure itself as the master and will broadcast a message to all other devices within your balenaCloud application to get them in sync. 
+To offset temperature, add a balenaCloud environment variable called `BALENASENSE_TEMP_OFFSET`, and add an offset in degrees C.
 
-**Note:** It can take a few seconds for the system to autoconfigure the first time you stream.
+To offset humidity, add a balenaCloud environment variable called `BALENASENSE_HUM_OFFSET` and add a value in % RH.
 
-Let the music play!
+To adjust the pressure sensor and compensate for altitude, add a balenaCloud environment variable called `BALENASENSE_ALTITUDE` and set it to your altitude above sea level in meters.
+
+### Using 1-wire sensors
+To use 1-wire sensors such as the DS18B20 on the Raspberry Pi, you'll need to enable the 1-wire GPIO interface by adding the `w1-gpio` device tree overlay. Information on the 1-wire interface is available at [pinout.xyz](https://pinout.xyz/pinout/1_wire), but in the case of BalenaOS, you can do this easily in the Device Configuration section of the BalenaCloud dashboard by adding a custom configuration variable called `RESIN_HOST_CONFIG_dtoverlay`, with value `w1-gpio`.
+
+More information about device tree overlays and other advanced boot settings for the Raspberry Pi is available in the [BalenaOS docs](https://www.balena.io/docs/reference/OS/advanced/) and [BalenaCloud management reference section](https://www.balena.io/docs/learn/manage/configuration/).
+
+#### Hardware setup
+
+[The Pi Hut guide to using a DS18B20 sensor with a Raspberry Pi](https://thepihut.com/blogs/raspberry-pi-tutorials/ds18b20-one-wire-digital-temperature-sensor-and-the-raspberry-pi) shows how to wire these sensors up. Don't forget you'll need a pullup resistor between the Vin and data lines.
+
+#### Multiple 1-wire sensors on one device
+1-wire devices each have a unique ID; if you have more than one sensor attached to your Raspberry Pi, it is possible to select which one to use by setting the `BALENASENSE_1WIRE_SENSOR_ID` device variable in BalenaCloud. If no ID is given, the first sensor found will be used.
+
+For more information about how to find the ID for 1-wire devices, the Pi Hut guide referenced above, or [this Raspberry Pi tutorial](https://tutorials-raspberrypi.com/raspberry-pi-temperature-sensor-1wire-ds18b20/) are useful.
+
+### Data outputs
+Versions of balenaSense after v1.5 introduce [Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) to capture the data from the sensor which permits the feed of data to other sources in addition to the internal InfluxDB instance.

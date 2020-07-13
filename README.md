@@ -105,3 +105,9 @@ If you're feeding to one of the above services and have multiple sensors, you ca
 A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/p/34fa01e1-7c1d-4fba-bb2a-b57c19d13985/).
 
 We published an additional blog covering the setup of a fleet of balenaSense devices to feed to a central database on [our blog here](https://www.balena.io/blog/p/474400e0-e1f7-4c08-b5b3-e993fd12bda9/).
+
+### Become a balena poweruser
+
+Want to learn more about what makes balena work? Try one of our [masterclasses](https://www.balena.io/docs/learn/more/masterclasses/overview/). Each lesson is a self-contained, deeply detailed walkthrough on core skills you need to be successful with your next edge project.
+
+Check them out at our [docs](https://www.balena.io/docs/learn/more/masterclasses/overview/). Also, reach out to us on the [Forums](https://forums.balena.io/) if you need help.

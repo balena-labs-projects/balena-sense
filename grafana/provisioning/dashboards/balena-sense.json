@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
   "links": [],
   "panels": [
     {
@@ -1005,6 +1004,6 @@
   },
   "timezone": "",
   "title": "balenaSense",
-  "uid": "pF3gRDiRk",
+  "uid": "balenaSense",
   "version": 1
 }

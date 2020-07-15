@@ -8,5 +8,6 @@ providers:
   editable: true
   disableDeletion: true
   updateIntervalSeconds: 10
+  allowUiUpdates: true
   options:
-    path: /usr/src/app/provisioning/dashboards
+    path: /etc/grafana/provisioning/dashboards

@@ -1,20 +1,9 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%:buster
+FROM grafana/grafana@sha256:f27625018abf2ff46b2d6ed6055e93565fa1ca7ca10a258763c0f1556fee75c7
 
-COPY ./grafana.ini /usr/share/grafana/conf/custom.ini
-COPY ./provisioning /usr/src/app/provisioning
-COPY ./*.sh /usr/src/app/
-RUN chmod +x /usr/src/app/*.sh
+USER root
+RUN apk add curl jq
 
-RUN install_packages \
-      fontconfig-config \
-      fonts-dejavu-core \
-      libfontconfig1 \
-      ucf \
-      jq \
-      wget
+COPY ./provisioning /etc/grafana/provisioning
+COPY ./*.sh ./
 
-RUN /usr/src/app/download.sh "%%BALENA_ARCH%%"
-
-RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb
-
-CMD ["/bin/sh","/usr/src/app/entry.sh"]
+ENTRYPOINT ["./entry.sh"]

@@ -1,2 +1,3 @@
 #!/bin/bash
-./api.sh & /run.sh
+/usr/src/app/api.sh &
+exec grafana-server -homepath /usr/share/grafana

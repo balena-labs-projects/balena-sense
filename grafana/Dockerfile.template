@@ -1,10 +1,5 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%:buster
 
-COPY ./grafana.ini /usr/share/grafana/conf/custom.ini
-COPY ./provisioning /usr/src/app/provisioning
-COPY ./*.sh /usr/src/app/
-RUN chmod +x /usr/src/app/*.sh
-
 RUN install_packages \
       fontconfig-config \
       fonts-dejavu-core \
@@ -13,6 +8,9 @@ RUN install_packages \
       jq \
       wget
 
+COPY ./provisioning /usr/share/grafana/conf/provisioning
+COPY ./*.sh /usr/src/app/
+RUN chmod +x /usr/src/app/*.sh
 RUN /usr/src/app/download.sh "%%BALENA_ARCH%%"
 
 RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb

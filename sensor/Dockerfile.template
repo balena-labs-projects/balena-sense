@@ -1,25 +1,34 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build
+FROM balenalib/%%BALENA_MACHINE_NAME%%-python:3-build as build
+
+RUN mkdir /install
+WORKDIR /install
 
 ARG BSEC_FILENAME=BSEC_1.4.7.4_Generic_Release.zip
 
 RUN install_packages \
         unzip
 
-WORKDIR /usr/src/app
 RUN git clone https://github.com/balena-io-playground/bsec_bme680_linux.git
 RUN wget https://ae-bst.resource.bosch.com/media/_tech/media/bsec/$BSEC_FILENAME
 RUN unzip -d bsec_bme680_linux/src $BSEC_FILENAME
 RUN echo $BSEC_FILENAME > version
 
-WORKDIR /usr/src/app/bsec_bme680_linux
+WORKDIR /install/bsec_bme680_linux
 RUN chmod +x make.sh
 RUN ./make.sh
 
-RUN pip install smbus w1thermsensor enviroplus RPi.GPIO
+COPY requirements.txt /requirements.txt
+RUN pip install --install-option="--prefix=/install" -r /requirements.txt
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine-python:3-run  
+COPY --from=build /install /usr/local
+
 
 WORKDIR /usr/src/app
+COPY --from=build /install/version /usr/src/app/version
 COPY ./scripts ./scripts
 COPY ./entry.sh /usr/src/app/
 RUN chmod +x /usr/src/app/entry.sh
 
 CMD ["./entry.sh"]
+

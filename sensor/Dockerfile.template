@@ -12,6 +12,7 @@ RUN unzip -d bsec_bme680_linux/src $BSEC_FILENAME
 RUN echo $BSEC_FILENAME > version
 
 WORKDIR /usr/src/app/bsec_bme680_linux
+RUN sed -i 's/i2c-1/i2c-0/g' bsec_bme680.c
 RUN chmod +x make.sh
 RUN ./make.sh
 

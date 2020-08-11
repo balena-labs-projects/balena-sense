@@ -15,7 +15,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 class balenaSense():
     readfrom = 'unset'
-    bus = smbus.SMBus(1)
+    bus = smbus.SMBus(0)
 
     def __init__(self):
         # First, check for enviro plus hat (since it also has BME on 0x76)

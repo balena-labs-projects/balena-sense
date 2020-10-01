@@ -48,7 +48,7 @@ Running this project is as simple as deploying it to a balenaCloud application.
 
 One-click deploy to balenaCloud:
 
-[![](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy)
+[![balena deploy button](https://balena.io/deploy.png)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sense&defaultDeviceType=raspberry-pi)
 
 ### Configuration
 

@@ -37,8 +37,8 @@ class balenaSense():
                 print('BME680 not found on 0x76, trying 0x77')
             else:
                 print('BME680 found on 0x76')
-                self.sensor = BME680(self.readfrom)
                 self.readfrom = 'bme680primary'
+                self.sensor = BME680(self.readfrom)
 
         # If we didn't find it on 0x76, look on 0x77
         if self.readfrom == 'unset':
@@ -48,8 +48,8 @@ class balenaSense():
                 print('BME680 not found on 0x77')
             else:
                 print('BME680 found on 0x77')
-                self.sensor = BME680(self.readfrom)
                 self.readfrom = 'bme680secondary'
+                self.sensor = BME680(self.readfrom)
 
 
         # If no BME680, is there a Sense HAT?

@@ -1,37 +1,37 @@
 version: '2'
 volumes:
     sense-data:
+    dashboard-data:
 services:
-  influxdb:
+  influxdb:  #ORIGINAL
     restart: always
     build: ./influxdb
     volumes:
       - 'sense-data:/data'
-  grafana:
+  dashboard:  #BLOCK replaces grafana
+    image: balenablocks/dashboard:raspberrypi3
     restart: always
-    build: ./grafana
-    ports:
-      - "80"
     volumes:
-      - 'sense-data:/data'
-    environment:
-        - 'HOME_DASHBOARD_UID=balenaSense'
-        - 'GF_PATHS_DATA=/data/grafana'
-        - 'GF_SERVER_HTTP_PORT=80'
-        - 'GF_SESSION_PROVIDER=memory'
-        - 'GF_AUTH_ANONYMOUS_ENABLED=true'
-  sensor:
+        - 'dashboard-data:/data'
+    ports:
+        - '80'
+  sensor:  #ORIGINAL
     build: ./sensor
     privileged: true
     restart: always
     volumes:
       - 'sense-data:/data'
-  telegraf:
-    build: ./telegraf
+    expose:  # ADDED
+      - '7575'
+  connector: #BLOCK replaces telegraf
+    image: balenablocks/connector:raspberrypi3
     restart: always
-    cap_add:
-      - SYS_ADMIN
-  mqtt:
+    labels:
+      io.balena.features.balena-api: '1' # necessary to discover services
+    privileged: true # necessary to change container hostname
+    ports:
+      - "8080" # only necessary if using ExternalHttpListener (see below)
+  mqtt:  #ORIGINAL
     image: arm32v6/eclipse-mosquitto
     ports:
       - "1883:1883"

@@ -131,7 +131,7 @@ class balenaSenseHTTP(BaseHTTPRequestHandler):
 balenasense = balenaSense()
 
 while True:
-    server_address = ('', 80)
+    server_address = ('', 7575)
     httpd = HTTPServer(server_address, balenaSenseHTTP)
     print('Sensor HTTP server running')
     httpd.serve_forever()

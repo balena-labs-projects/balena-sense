@@ -1,19 +1,2 @@
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-python
+FROM balenablocks/dashboard:%%BALENA_MACHINE_NAME%%
 
-RUN install_packages \
-      libfontconfig1
-
-WORKDIR /usr/src/app
-COPY ./download.sh .
-RUN ./download.sh "%%BALENA_ARCH%%"
-
-RUN dpkg -i /tmp/grafana.deb && rm /tmp/grafana.deb
-
-RUN pip install stringcase
-
-COPY ./provisioning /usr/share/grafana/conf/provisioning
-COPY templates ./templates
-COPY ./entry.sh .
-COPY ./*.py ./
-
-CMD ["/bin/sh","./entry.sh"]

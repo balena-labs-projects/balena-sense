@@ -9,7 +9,7 @@ services:
     volumes:
       - 'sense-data:/data'
   dashboard:  #BLOCK replaces grafana
-    image: balenablocks/dashboard:raspberrypi3
+    image: ./dashboard
     restart: always
     volumes:
         - 'dashboard-data:/data'

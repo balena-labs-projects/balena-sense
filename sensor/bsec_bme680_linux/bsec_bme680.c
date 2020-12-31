@@ -28,14 +28,13 @@
 /* definitions */
 
 #define DESTZONE "TZ=Europe/Berlin"
-#define temp_offset (0.0f)
+#define temp_offset (5.0f)
 #define sample_rate_mode (BSEC_SAMPLE_RATE_LP)
 
 int g_i2cFid; // I2C Linux device handle
 int i2c_address = BME680_I2C_ADDR_PRIMARY;
-int i2c_address_secondary = BME680_I2C_ADDR_SECONDARY;
-char *filename_state = "/data/sensor/bsec_iaq.state";
-char *filename_config = "/data/sensor/bsec_iaq.config";
+char *filename_state = "bsec_iaq.state";
+char *filename_config = "bsec_iaq.config";
 
 /* functions */
 
@@ -181,32 +180,39 @@ int64_t get_timestamp_us()
  *
  * return          none
  */
- void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy,
-                   float temperature, float humidity, float pressure,
-                   float raw_temperature, float raw_humidity, float gas,
-                   bsec_library_return_t bsec_status,
-                   float static_iaq, float co2_equivalent,
-                   float breath_voc_equivalent)
- {
+void output_ready(int64_t timestamp, float iaq, uint8_t iaq_accuracy,
+                  float temperature, float humidity, float pressure,
+                  float raw_temperature, float raw_humidity, float gas,
+                  bsec_library_return_t bsec_status,
+                  float static_iaq, float co2_equivalent,
+                  float breath_voc_equivalent)
+{
+  //int64_t timestamp_s = timestamp / 1000000000;
+  ////int64_t timestamp_ms = timestamp / 1000;
 
-   time_t t = time(NULL);
-   struct tm tm = *localtime(&t);
+  //time_t t = timestamp_s;
+  /*
+   * timestamp for localtime only makes sense if get_timestamp_us() uses
+   * CLOCK_REALTIME
+   */
+  time_t t = time(NULL);
+  struct tm tm = *localtime(&t);
 
-   printf("{\"timestamp\":\"%d-%02d-%02d %02d:%02d:%02d\",", tm.tm_year + 1900,tm.tm_mon + 1,
-          tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec); /* localtime */
-
-   printf("\"iaq\":%.2f, \"iaq_accuracy\":%d,", iaq, iaq_accuracy);
-   printf("\"raw_temperature\":%.2f, \"raw_humidity\":%.2f,",
-         raw_temperature,
-         raw_humidity);
-   printf("\"temperature\":%.2f, \"humidity\":%.2f,", temperature, humidity);
-   printf(" \"pressure\":%.2f,", pressure / 100);
-   printf(" \"eco2_ppm\":%.15f,", co2_equivalent);
-   printf(" \"bvoce_ppm\":%.25f,", breath_voc_equivalent);
-   printf("\"gas_pressure\":%.0f, \"bsec_status\":%d }", gas, bsec_status);
-   printf("\r\n");
-   fflush(stdout);
- }
+  printf("%d-%02d-%02d %02d:%02d:%02d,", tm.tm_year + 1900,tm.tm_mon + 1,
+         tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec); /* localtime */
+  printf("[IAQ (%d)]: %.2f", iaq_accuracy, iaq);
+  printf(",[T degC]: %.2f,[H %%rH]: %.2f,[P hPa]: %.2f", temperature,
+         humidity,pressure / 100);
+  printf(",[G Ohms]: %.0f", gas);
+  printf(",[S]: %d", bsec_status);
+  //printf(",[static IAQ]: %.2f", static_iaq);
+  printf(",[eCO2 ppm]: %.15f", co2_equivalent);
+  printf(",[bVOCe ppm]: %.25f", breath_voc_equivalent);
+  //printf(",%" PRId64, timestamp);
+  //printf(",%" PRId64, timestamp_ms);
+  printf("\r\n");
+  fflush(stdout);
+}
 
 /*
  * Load binary file from non-volatile memory into buffer
@@ -314,25 +320,12 @@ uint32_t config_load(uint8_t *config_buffer, uint32_t n_buffer)
  *
  * return      result of the processing
  */
-int main(int argc, char* argv[])
+int main()
 {
   putenv(DESTZONE); // Switch to destination time zone
 
   i2cOpen();
-  if( argc == 2 )
-  {
-    int cmp = strcmp( argv[1], "secondary");
-
-    if(cmp == 0)
-    {
-      i2cSetAddress(i2c_address_secondary);
-    } else {
-      perror("Invalid argument");
-      exit(1);
-    }
-  } else {
-    i2cSetAddress(i2c_address);
-  }
+  i2cSetAddress(i2c_address);
 
   return_values_init ret;
 
@@ -357,3 +350,4 @@ int main(int argc, char* argv[])
   i2cClose();
   return 0;
 }
+

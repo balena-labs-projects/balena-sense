@@ -1,38 +1,37 @@
 version: '2'
 volumes:
     sense-data:
+    dashboard-data:
 services:
   influxdb:
     restart: always
-    build: ./influxdb
+    image: arm32v7/influxdb@sha256:2fed9b09a672cab330ac3ea1f03616e6821f2235bda64d549f605ef0d7081911
     volumes:
-      - 'sense-data:/data'
-  grafana:
+      - 'sense-data:/var/lib/influxdb'
+  dashboard:
+    image: balenablocks/dashboard
     restart: always
-    build: ./grafana
-    ports:
-      - "80"
     volumes:
-      - 'sense-data:/data'
-    environment:
-        - 'HOME_DASHBOARD_UID=balenaSense'
-        - 'GF_PATHS_DATA=/data/grafana'
-        - 'GF_SERVER_HTTP_PORT=80'
-        - 'GF_SESSION_PROVIDER=memory'
-        - 'GF_AUTH_ANONYMOUS_ENABLED=true'
+        - 'dashboard-data:/data'
+    ports:
+        - '80'
   sensor:
-    build: ./sensor
+    image: balenablocks/sensor
     privileged: true
+    labels:
+      io.balena.features.kernel-modules: '1'
+      io.balena.features.sysfs: '1'
+      io.balena.features.supervisor-api: '1'
+    expose:
+      - '7575'
+    environment:
+      RAW_VALUES: '0'
+      COLLAPSE_FIELDS: '1'
+  connector:
+    image: balenablocks/connector
     restart: always
-    volumes:
-      - 'sense-data:/data'
-  telegraf:
-    build: ./telegraf
-    restart: always
-    cap_add:
-      - SYS_ADMIN
-  mqtt:
-    image: arm32v6/eclipse-mosquitto
+    labels:
+      io.balena.features.balena-api: '1'
+    privileged: true
     ports:
-      - "1883:1883"
-    restart: always
+      - "8080"

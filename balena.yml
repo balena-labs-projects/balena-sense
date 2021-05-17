@@ -1,0 +1,26 @@
+name: "balenaSense"
+description: "Take readings from a BME680 or similar sensors on a Raspberry Pi, store with InfluxDB and view with Grafana."
+fleetcta: "Add sensors!"
+post-provisioning: "Once the application starts, view your dashboard on the public URL."
+type: "sw.application"
+assets:
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/balenalabs/balena-sense"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/balenalabs/balena-sense/master/hub-logo.png"
+data:
+  applicationEnvironmentVariables:
+    - COLLAPSE_FIELDS: 1
+    - RAW_VALUES: 0
+  defaultDeviceType: "raspberrypi3"
+  supportedDeviceTypes:
+    - "raspberry-pi"
+    - "raspberry-pi2"
+    - "raspberrypi3"
+    - "raspberrypi4-64"
+    - "fincm3"
+version: 2.0.0

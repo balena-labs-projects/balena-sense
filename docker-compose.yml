@@ -35,3 +35,8 @@ services:
     privileged: true
     ports:
       - "8080"
+  mqtt:
+    image: eclipse-mosquitto:1.6.15
+    ports:
+      - "1883:1883"
+    restart: always  

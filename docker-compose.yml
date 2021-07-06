@@ -16,7 +16,7 @@ services:
     ports:
         - '80'
   sensor:
-    image: balenablocks/sensor
+    build: .
     privileged: true
     labels:
       io.balena.features.kernel-modules: '1'

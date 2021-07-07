@@ -3,7 +3,9 @@ description: >-
   Take readings from a BME680 or similar sensors on a Raspberry Pi, store with
   InfluxDB and view with Grafana.
 fleetcta: Add sensors!
-post-provisioning: 'Once the application starts, view your dashboard at http://balena.local or using the local IP address of your device.'
+post-provisioning: >-
+  Once the application starts, view your dashboard at http://balena.local or
+  using the local IP address of your device.
 type: sw.application
 assets:
   repository:
@@ -26,4 +28,4 @@ data:
     - raspberrypi3
     - raspberrypi4-64
     - fincm3
-version: 2.2.1
+version: 2.2.2

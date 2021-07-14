@@ -3,3 +3,4 @@ dist
 meta.json
 landr-dist
 node_modules
+*.traineddata

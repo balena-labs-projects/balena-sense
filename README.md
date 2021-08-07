@@ -20,7 +20,7 @@ A Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project that 
 
 ### Hardware required
 
-![](https://balena.io/blog/content/images/2019/03/hardware-required.jpg)
+![](https://github.com/balenalabs/balena-sense/raw/master/images/sense-sensor.jpg)
 
 Here’s the shopping list for this project. Depending if you’d like to crack out the soldering iron or not will dictate what sensor board you can use; some are plug and play, some require a little soldering.
 
@@ -42,7 +42,7 @@ If you’re happy to do a little soldering, that opens up a few more options:
 
 ### Software required
 
-Running this project is as simple as deploying it to a balenaCloud application.
+Running this project is as simple as deploying it to a balenaCloud fleet.
 
 One-click deploy to balenaCloud:
 
@@ -65,7 +65,7 @@ Each of the blocks that make up balenaSense v2 are customizable through device v
 
 ##### Sensor
 
-By default, balenaSense transforms the name and values from certain sensors to be more human-readable. For instance, a raw value from a BME680 is `{"temp": 24620.0}` wheras after transformation it is `{"temperature": 24.62}`. You can force the raw values by changing the `RAW_VALUES` device variable to `0` or deleting it. You can also change temperature units by setting the `TEMP_UNIT` variable to `F` for Farenheit or `C` (the default) for Celcius.
+By default, balenaSense transforms the name and values from certain sensors to be more human-readable. For instance, a raw value from a BME680 is `{"temp": 24620.0}` wheras after transformation it is `{"temperature": 24.62}`. You can force the raw values by changing the `RAW_VALUES` device variable to `0` or deleting it. You can also change temperature units by setting the `TEMP_UNIT` variable to `F` for Farenheit or `C` (the default) for Celsius.
 
 You can find all of the sensor block options [here](https://github.com/balenablocks/sensor).
 
@@ -77,7 +77,7 @@ The connector block connects data sources with data sinks using telegraf and cod
 The [dashboard block](https://github.com/balenablocks/dashboard) automatically generates Grafana dashboards based on the discovered schema of an InfluxDB instance running on the same device.
 
 ### Setup guides
-A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/p/34fa01e1-7c1d-4fba-bb2a-b57c19d13985/).
+A full guide covering the initial setup of this project, as well as integration with Home Assistant and the use of multiple instances is available on [our blog](https://www.balena.io/blog/balenasense-v2-updated-temperature-pressure-and-humidity-monitoring-for-raspberry-pi/).
 
 ### Become a balena poweruser
 

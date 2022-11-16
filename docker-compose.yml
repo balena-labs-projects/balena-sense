@@ -9,7 +9,7 @@ services:
     volumes:
       - 'sense-data:/var/lib/influxdb'
   dashboard:
-    image: balenablocks/dashboard
+    image: bh.cr/balenalabs/dashboard-armv7hf
     restart: always
     volumes:
         - 'dashboard-data:/data'
@@ -28,7 +28,7 @@ services:
       RAW_VALUES: '0'
       COLLAPSE_FIELDS: '1'
   connector:
-    image: balenablocks/connector
+    image: bh.cr/balenalabs/connector-armv7hf
     restart: always
     labels:
       io.balena.features.balena-api: '1'

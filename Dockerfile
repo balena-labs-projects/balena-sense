@@ -1,4 +1,4 @@
-FROM balenablocks/sensor
+FROM bh.cr/balenalabs/sensor-armv7hf
 
 WORKDIR /usr/src/app
 

@@ -9,7 +9,7 @@ services:
     volumes:
       - 'sense-data:/var/lib/influxdb'
   dashboard:
-    image: bh.cr/balenalabs/dashboard-armv7hf
+    image: bh.cr/balenalabs/dashboard
     restart: always
     volumes:
         - 'dashboard-data:/data'

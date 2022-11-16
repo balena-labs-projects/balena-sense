@@ -34,7 +34,7 @@ We want to create a project that motivates users to build their own environmenta
 Version 2 of balenaSense is built using [blocks](https://www.balena.io/blog/introducing-balenablocks-jumpstart-your-iot-app-development/), which are intelligent, drop-in chunks of functionality. This is a major change from earlier versions of balenaSense which used a number of configuration files to tie together the InfluxDB database, Grafana dashboards and sensor readings. Blocks are designed to work together and use auto-discovery (which can be overridden) to pass data amongst themselves.
 
 ### How it works
-The task of reading data from the sensors is now handled by our new [sensor block](https://github.com/balenablocks/sensor). Instead of installing separate drivers and using custom code for each type of sensor, the sensor block utilizes Industrial IO (IIO) and relies on the variety of sensor drivers already included in the Linux kernel itself. (You can learn more about the sensor block and its use of IIO in [this recent blog post](https://www.balena.io/blog/balenablocks-in-depth-sensor-and-pulse/).) This means balenaSense now supports a wider variety of sensors as well as multiple connected sensors. 
+The task of reading data from the sensors is now handled by our new [sensor block](https://github.com/balena-labs-projects/sensor). Instead of installing separate drivers and using custom code for each type of sensor, the sensor block utilizes Industrial IO (IIO) and relies on the variety of sensor drivers already included in the Linux kernel itself. (You can learn more about the sensor block and its use of IIO in [this recent blog post](https://www.balena.io/blog/balenablocks-in-depth-sensor-and-pulse/).) This means balenaSense now supports a wider variety of sensors as well as multiple connected sensors. 
 
 Currently, only I2C sensors that are not mounted on a HAT are supported by the sensor block. This means 1-wire sensors, the Raspberry Pi Sense-HAT, and Pimoroni Enviro+ Air Quality HAT are no longer supported by balenaSense. 
 
@@ -42,7 +42,7 @@ The indoor air quality (IAQ) readings in previous versions of balenaSense were d
 
 ### balenaBlocks and extensibility
 
-[balenaBlocks](https://github.com/balenablocks) are open source and extendable! We're looking into non-proprietary ways to support air quality readings and sensors on HATs: PRs are welcome! We believe that this block-based balenaSense is a more flexible solution overall, and a better base for adding more features as time goes on. If there is a feature that you want to see reinstated, please add an issue on [the repo](https://github.com/balenalabs/balena-sense).
+[balenaBlocks](https://github.com/balena-labs-projects) are open source and extendable! We're looking into non-proprietary ways to support air quality readings and sensors on HATs: PRs are welcome! We believe that this block-based balenaSense is a more flexible solution overall, and a better base for adding more features as time goes on. If there is a feature that you want to see reinstated, please add an issue on [the repo](https://github.com/balena-labs-projects/balena-sense).
 
 ## Contributing
 

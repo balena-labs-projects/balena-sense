@@ -52,10 +52,6 @@ Do you want to help make balenaSense better? Take a look at our [Contributing Gu
 
 If you're having any problem, please [raise an issue](https://github.com/balenalabs/balena-sense/issues/new) on GitHub and we will be happy to help. You can also find help on the balenaForums, in a special section [dedicated to balenaSense](https://forums.balena.io/c/project-help/balenasense/86).
 
-## License
-
-balenaSense is free software, and may be redistributed under the terms specified in the [license](https://github.com/balenalabs/balena-sound/blob/master/LICENSE).
-
 ## Setup guides
 A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/balenasense-v2-updated-temperature-pressure-and-humidity-monitoring-for-raspberry-pi/).
 

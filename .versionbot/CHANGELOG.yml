@@ -1,0 +1,1434 @@
+- commits:
+    - subject: moving from balenablocks to balena-labs-projects
+      hash: 013ef51de2eb9c50f179b75852e1f87739532ccd
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 2.3.1
+  title: ""
+  date: 2022-11-16T20:08:27.261Z
+- version: 2.3.0
+  date: 2021-08-17T15:03:20Z
+  commits:
+    - hash: a7d8aa48f08beeaafc4872fc3b439a543bb1b79a
+      author: Andrew Nhem
+      footers:
+        change-type: minor
+      subject: Adding initial Landr content
+      body: Removing aoutdated air quality mentions .
+    - hash: 0c803879a78ee2db45c2d70b579c9280e89e41ec
+      author: Andrew Nhem
+      subject: Merge branch 'master' into landr-wip
+      body: null
+    - hash: d183ed4a6e7967930012168665bd42983d33478a
+      author: Andrew Nhem
+      subject: Updating architecture.md, add logo
+      body: null
+    - hash: 5f8afa6869ddf911994654d29d1a95ef03a7b0d4
+      author: Andrew Nhem
+      subject: Merge branch 'landr-wip' of https://github.com/balenalabs/balena-sense
+        into landr-wip
+      body: null
+- version: 2.2.5
+- date: 2021-08-09T17:33:07Z
+- commits:
+    - hash: 0580c5aeba0fd0bc8f3fd5560f4b788feeb2ee0f
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "patch: updated verbiage"
+- commits:
+    - body: null
+- version: 2.2.4
+- date: 2021-08-07T00:54:26Z
+- commits:
+    - hash: de9d5f5d8e55bb35460427fedbee6873a3d2bab4
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "patch: add updated photo"
+- commits:
+    - body: null
+- version: 2.2.3
+- date: 2021-07-12T19:45:50Z
+- commits:
+    - hash: 85e080194afee23c57d8704e628754ba768446b0
+- commits:
+    - author: Andrew Nhem
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Adding Landr-created directories and files to repo
+- commits:
+    - body: null
+- version: 2.2.2
+- date: 2021-07-07T21:03:59Z
+- commits:
+    - hash: 88334e0fa464bc52db81eba8cad4b9b4ed913e67
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "patch: update logo file"
+- commits:
+    - body: null
+- version: 2.2.1
+- date: 2021-07-07T20:34:19Z
+- commits:
+    - hash: 2480aef70b4aa8b06632645c20e5bccd40d03be4
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "patch: add new hub logo"
+- commits:
+    - body: null
+- version: 2.2.0
+- date: 2021-07-06T21:50:19Z
+- commits:
+    - hash: b9891286f6e2f52698fb1e5f54efec7ea4b02af8
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "minor: build sensor to change hostname"
+- commits:
+    - body: null
+- commits:
+    - hash: 2e4178c3a6055fb80d45b27aaa1dae3236d6d53e
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "minor: change hostname"
+- commits:
+    - body: null
+- commits:
+    - hash: 912fec1b9c7919c450ddf6f99aaef43f03532d52
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "minor: build sensor from block"
+- commits:
+    - body: null
+- version: 2.1.1
+- date: 2021-06-30T16:20:20Z
+- commits:
+    - hash: 9dfd055159488230118ec0a9e865b4f5eeb7b738
+- commits:
+    - author: Tomás Migone
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Tomás Migone <tomas@balena.io>
+- commits:
+    - subject: "meta: remove CODEOWNERS file"
+- commits:
+    - body: null
+- version: 2.1.0
+- date: 2021-06-24T16:59:06Z
+- commits:
+    - hash: 48b75a8a43637f4740a26409a185571c69328f15
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: "minor: Add MQTT"
+- commits:
+    - body: null
+- version: 2.0.0
+- date: 2021-05-17T12:22:15Z
+- commits:
+    - hash: dcadd15d77b8e43fdfa230fd368d9f3261c612f0
+- commits:
+    - author: Alan Boris
+- commits:
+    - footers:
+        change-type: major
+- commits:
+    - footers:
+        signed-off-by: Alan boris <alanboris@gmail.com>
+- commits:
+    - footers:
+        co-authored-by: Tomás Migone <tomas@balena.io>
+- commits:
+    - subject: v2 - rewrite project with balena blocks
+- commits:
+    - body: null
+- commits:
+    - hash: 99dc0b0617af6d282b7d5e486b455016cad899da
+- commits:
+    - author: Alan Boris
+- commits:
+    - subject: Update balena.yml
+- commits:
+    - body: null
+- version: 1.9.9
+- date: 2020-12-15T18:20:35Z
+- commits:
+    - hash: e22b3657380b5c133eb92e6d5031afcaa7f02563
+- commits:
+    - author: Amit Solanki
+- commits:
+    - subject: Use svg deploy with balena button
+- commits:
+    - body: null
+- commits:
+    - hash: a88f04e3d689a147ffa0a1745c51981029a57af6
+- commits:
+    - author: Amit Solanki
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Andrew <andrewn@balena.io>
+- commits:
+    - subject: Use svg deploy with balena button
+- commits:
+    - body: null
+- commits:
+    - hash: 3559f201f7e7992cf7017eab6ece58f27ad47689
+- commits:
+    - author: andrew
+- commits:
+    - subject: Merge branch 'svg-dwb' of https://github.com/balenalabs/balena-sense
+        into svg-dwb
+- commits:
+    - body: null
+- version: 1.9.8
+- date: 2020-11-04T19:37:27Z
+- commits:
+    - hash: 0e85c2d7aca09d0410d0623d1e056582807376ee
+- commits:
+    - author: Rahul Thakoor
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+- commits:
+    - subject: Bump BSEC version to 1.4.8
+- commits:
+    - body: null
+- commits:
+    - hash: 7b905a55ef71294eedf3c5798c66b903b2499618
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add build for bsec_bme680 to project
+- commits:
+    - body: null
+- version: 1.9.7
+- date: 2020-07-15T18:05:37Z
+- commits:
+    - hash: b017d93620546630add16cf26f480321a886bb69
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Use Grafana docker image closes #87"
+- commits:
+    - body: |-
+        Changed to using offical Grafana docker image
+        Updated API script to correctly set default dashboard
+        Reduced image size from ~340MB to ~132MB
+        Tidied configuration to all in one place (docker-compose)
+        Removed arch detection download script
+- commits:
+    - hash: 4724bed04c8d80e3ab35b90e0ad4e5a070c0e3af
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Correct InfluxDB conf path closes #84"
+- commits:
+    - body: null
+- commits:
+    - hash: c1f72f6263283b6449ae8e6c152c51d2dd1fc73d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Revert to balena base image
+- commits:
+    - body: null
+- version: 1.9.6
+- date: 2020-07-15T13:03:39Z
+- commits:
+    - hash: 9d8aa65e5b99e8871752667b177442785c89a5d6
+- commits:
+    - author: andrewnhem
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Andrew Nhem <andrewn@balena.io>
+- commits:
+    - subject: Including masterclass link to readme
+- commits:
+    - body: Add masterclass reference to readme. This shouldn't break anything.
+- version: 1.9.5
+- date: 2020-06-15T08:20:57Z
+- commits:
+    - hash: 541fb351176699884c382760549e091f09a7ba41
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Enable balena builds for CI
+- commits:
+    - body: null
+- version: 1.9.4
+- date: 2020-06-15T08:13:01Z
+- commits:
+    - hash: a0193305e3439f3ef20102ba8bc0fa112c805f10
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Pin Alpine version for influxdb
+- commits:
+    - body: "Fixes #82"
+- version: 1.9.3
+- date: 2020-05-14T13:21:22Z
+- commits:
+    - hash: da91709569a2c6eea0aa06b4ae729a6f27ddcce8
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add Sense-HAT pressure sensor support
+- commits:
+    - body: "Fixes #68"
+- version: 1.9.2
+- date: 2020-04-29T09:29:54Z
+- commits:
+    - hash: c665826d1ff7880c28ffe95b107c4809d50f3249
+- commits:
+    - author: Stevche Radevski
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Stevche Radevski <stevche@balena.io>
+- commits:
+    - subject: Add a "deploy to balena" button
+- commits:
+    - body: null
+- version: 1.9.1
+- date: 2020-03-19T11:36:53Z
+- commits:
+    - hash: f458813708b94597c426eab5336e58f4c67b70da
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Reinstate BME680 object load
+- commits:
+    - body: null
+- version: 1.9.0
+- date: 2020-03-13T11:25:24Z
+- commits:
+    - hash: e22985eeb9ac0cd0daa9aeb25f271882f483aae6
+- commits:
+    - author: Shaun Mulligan
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Shaun Mulligan <shaun@balena.io>
+- commits:
+    - subject: Add initial enviroplus support
+- commits:
+    - body: null
+- commits:
+    - hash: d313a0ccf340a78a0f7f924a63912166d57a8b96
+- commits:
+    - author: Shaun Mulligan
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Shaun Mulligan shaun@balena.io
+- commits:
+    - subject: Add gas readings and enviroplus dashboard
+- commits:
+    - body: null
+- commits:
+    - hash: f521cf2e9ebfdc218c5bb10db95f57ece389ab03
+- commits:
+    - author: Shaun Mulligan
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Shaun Mulligan shaun@balena.io
+- commits:
+    - subject: Update aarch64 dockerfile too
+- commits:
+    - body: null
+- commits:
+    - hash: ad3687758a3039198a4d10145b0108f7a3d88bab
+- commits:
+    - author: Shaun Mulligan
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Shaun Mulligan shaun@balena.io
+- commits:
+    - subject: Update readme
+- commits:
+    - body: null
+- commits:
+    - hash: 8a382d613b804c7c78637e5360d2d608368f9278
+- commits:
+    - author: Shaun Mulligan
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Shaun Mulligan <shaun@balena.io>
+- commits:
+    - subject: "[README] mention what sensors are supported currently"
+- commits:
+    - body: null
+- version: 1.8.3
+- date: 2020-01-31T14:20:56Z
+- commits:
+    - hash: 06311600db646220b7b4d7f7a5b1b0d2c9b5a2b6
+- commits:
+    - author: Matthew McGinn
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+- commits:
+    - subject: "meta: Update codeowners to HHR team"
+- commits:
+    - body: null
+- version: 1.8.2
+- date: 2020-01-27T14:17:51Z
+- commits:
+    - hash: f0b2a9f31fd44f029411d6c64efb41ef4060ae6d
+- commits:
+    - author: Tomás Migone
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Tomás Migone <tomas@balena.io>
+- commits:
+    - subject: "meta: Add @alanb128 to codeowners"
+- commits:
+    - body: null
+- version: 1.8.1
+- date: 2020-01-27T14:08:30Z
+- commits:
+    - hash: 4accff378bc52783d3fb0a15fa5f2a629ae15f1a
+- commits:
+    - author: Tomás Migone
+- commits:
+    - footers:
+        connects-to: "#53"
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Tomás Migone <tomas@balena.io>
+- commits:
+    - subject: "influxdb: Fix config file path location"
+- commits:
+    - body: null
+- version: 1.8.0
+- date: 2019-12-06T18:53:42Z
+- commits:
+    - hash: 36238f6fabad0b437923baa1f4ab5972ba87393b
+- commits:
+    - author: Alan Boris
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Alan Boris <alan@balena.io>
+- commits:
+    - subject: Adding MQTT functionality
+- commits:
+    - body: null
+- commits:
+    - hash: e05cca9ea2b158ceeb7c581039b5ec4b13f65757
+- commits:
+    - author: Alan Boris
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Alan Boris <alan@balena.io>
+- commits:
+    - subject: Adding MQTT functionality
+- commits:
+    - body: null
+- commits:
+    - hash: 8f71a2bcf174db7e2d5a058f66e2cdbd3dca1793
+- commits:
+    - author: Alan Boris
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Alan Boris <alan@balena.io>
+- commits:
+    - subject: Adding MQTT functionality
+- commits:
+    - body: null
+- version: 1.7.6
+- date: 2019-11-11T12:55:09Z
+- commits:
+    - hash: c5effcc39a112d6db72df213dc9ec84c6199e1fb
+- commits:
+    - author: root
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+- commits:
+    - subject: Use exec version of CMD and exec in scripts
+- commits:
+    - body: null
+- version: 1.7.5
+- date: 2019-11-04T19:07:15Z
+- commits:
+    - hash: bb59abac7eb192b1cb33553d575925b5251d0391
+- commits:
+    - author: Matthew McGinn
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Matthew McGinn <matthew@balena.io>
+- commits:
+    - subject: "telegraf: add executable permissions to telegraf scripts"
+- commits:
+    - body: null
+- version: 1.7.4
+- date: 2019-10-09T13:51:46Z
+- commits:
+    - hash: 247ea2e51e5aac594303d4d95415e9fbf951e66b
+- commits:
+    - author: Dimitrios Lytras
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: "readme: Update repo logo"
+- commits:
+    - body: null
+- version: 1.7.3
+- date: 2019-10-08T12:49:10Z
+- commits:
+    - hash: 063b7e30df541103628be6991576dfc767b1d503
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update codeowners, add PR template
+- commits:
+    - body: null
+- version: 1.7.2
+- date: 2019-10-07T11:09:04Z
+- commits:
+    - hash: c0b38e643ed89d996986160fdded9f47f490c211
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Correct project name in CONTRIBUTING.md
+- commits:
+    - body: null
+- version: 1.7.1
+- date: 2019-10-02T14:45:30Z
+- commits:
+    - hash: 58d26fa21050b0599125ec5b9dadd7654fd6e851
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        co-authored-by: Gergely Imreh <gergely@imreh.net>
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Resolve Sense-HAT readings issue fixes #42"
+- commits:
+    - body: null
+- version: 1.7.0
+- date: 2019-10-02T12:06:19Z
+- commits:
+    - hash: 25858413ebc9be93a7d7c992ea2f2848a5c582db
+- commits:
+    - author: Ian Grant
+- commits:
+    - subject: Add support for 1-wire temperature sensors (e.g. DS18B20)
+- commits:
+    - body: null
+- commits:
+    - hash: 479208e13a32498641a5a9d235b1140ee32355e1
+- commits:
+    - author: Ian Grant
+- commits:
+    - subject: Catch kernel module load error
+- commits:
+    - body: >-
+        E.g. if w1-gpio overlay is not loaded on a Raspberry Pi, don't error out.
+
+        Change-type:minor
+- commits:
+    - hash: f8521dea5a87ab5c7f1115ee6469c3c8e678ae19
+- commits:
+    - author: Ian Grant
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add information for 1-wire sensors to README
+- commits:
+    - body: null
+- version: 1.6.1
+- date: 2019-10-01T10:30:56Z
+- commits:
+    - hash: 821caef3b4bd794875cda12c0c057c20fb5b736d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Set mbar units on default dashboard fixes #39"
+- commits:
+    - body: null
+- version: 1.6.0
+- date: 2019-10-01T09:07:39Z
+- commits:
+    - hash: 2e7586bcd6e0761f57f15bd3c9dea42c1dfac6f8
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Add support for Raspberry Pi 4 fixes #36"
+- commits:
+    - body: null
+- commits:
+    - hash: 70f8b5060b02b6232f64b678589cb004fb4532b1
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change 64-bit Dockerfiles to work with Pi 3 & 4
+- commits:
+    - body: null
+- commits:
+    - hash: d77c98b94bcf804eef8ddb0960a6142c6048a6a5
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Refine grafana/telegraf download scripts
+- commits:
+    - body: null
+- version: 1.5.9
+- date: 2019-09-30T13:48:44Z
+- commits:
+    - hash: 181a8f7363e2f8afa1321a88aeed8e0a86d9a299
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add contribution guidelines
+- commits:
+    - body: null
+- version: 1.5.8
+- date: 2019-07-15T11:29:00Z
+- commits:
+    - hash: 92cee0676683cb194cd544e5564db9733b096ba9
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change to wget and pin on buster image
+- commits:
+    - body: >-
+        We've changed to wget here even though it requires another package in
+
+        order to circumvent this issue https://github.com/balena-io-library/base-images/issues/562
+- version: 1.5.7
+- date: 2019-07-11T10:03:24Z
+- commits:
+    - hash: 4db02f65bfb86e91bea3eb9d35a0ef47180bbf7e
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: "Clear previous data on BSEC library upgrade. Fixes #28"
+- commits:
+    - body: null
+- version: 1.5.6
+- date: 2019-07-08T11:41:44Z
+- commits:
+    - hash: 5844cf71972160f96ee8ed32416a53375d3067eb
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Bump BSEC version to latest
+- commits:
+    - body: null
+- version: 1.5.5
+- date: 2019-06-27T12:06:55Z
+- commits:
+    - hash: 4936eb38915b8f2e89431e75e53e4d791bc64ead
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update README to include new config vars for external DBs
+- commits:
+    - body: null
+- version: 1.5.4
+- date: 2019-06-26T17:16:33Z
+- commits:
+    - hash: a607c84c248eb9ee76d12f6228088369f2652387
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Added options for external InfluxDB feed
+- commits:
+    - body: null
+- version: 1.5.3
+- date: 2019-06-25T17:49:06Z
+- commits:
+    - hash: 6be177fe1a6b1eb66c76339e0911ea6794bb2309
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Copy only sensor/entry.sh and make executable
+- commits:
+    - body: null
+- version: 1.5.2
+- date: 2019-06-24T14:07:58Z
+- commits:
+    - hash: 69d09c1d4e8e598839a1890a85bb83665912909e
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add field type conversion to air quality accuracy
+- commits:
+    - body: null
+- commits:
+    - hash: 46d6219ce10a7596d3aa3c88db6dc1771c25f00c
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Merge branch 'master' into fix-accuracy-storage-type
+- commits:
+    - body: null
+- version: 1.5.1
+- date: 2019-06-21T14:15:32Z
+- commits:
+    - hash: 13c233b904e46bc8aa9c33e67540f68798c484ee
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Resolve issue where accuracy score being stored as float
+- commits:
+    - body: null
+- commits:
+    - hash: 7f08addcbdd9eadc8fb010f340cdc4813ec3e28d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Revert "Resolve issue where accuracy score being stored as float"
+- commits:
+    - body: null
+- commits:
+    - hash: fa2e67846375dcbea0ccf53883ed89c513f0699d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Resolve issue where accuracy score being stored as float
+- commits:
+    - body: null
+- version: 1.5.0
+- date: 2019-06-21T13:17:16Z
+- commits:
+    - hash: 3dac8681b12e3c521106a5bb0fad6501aeee1e4f
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Introduced Telegraf to take readings and push to InfluxDB cloud
+- commits:
+    - body: null
+- commits:
+    - hash: 24966bff1613f13998ef0ee63e46e61376565ad8
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Merge branch 'master' into influxdb-cloud
+- commits:
+    - body: null
+- commits:
+    - hash: 857236cb50dcdd6f40f2546cd409d13972a5f02b
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Bump InfluxDB to latest version
+- commits:
+    - body: null
+- commits:
+    - hash: b8be9afd3a2dc92e7e5546e28327584b456493b0
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Bugfixes to Grafana default dashboard script
+- commits:
+    - body: null
+- commits:
+    - hash: 1d2c84f2c75bfc40000461d67ac313363be852a7
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Remove container dependencies and revert to Alpine package for Influx
+- commits:
+    - body: null
+- version: 1.4.1
+- date: 2019-06-17T10:04:11Z
+- commits:
+    - hash: f8a94ff392fb47029319cb8cc31107343991985d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change grafana endpoint to remove auth requirement
+- commits:
+    - body: null
+- version: 1.4.0
+- date: 2019-06-04T23:21:45Z
+- commits:
+    - hash: 68c428cf12875398c0c5504c1172c9c878518dc8
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change method used to set home dashboard
+- commits:
+    - body: null
+- commits:
+    - hash: 89b9dd26d7e07f11d56a1388ee0b5c6005227700
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add readings for eCO2 + bVOCe to output
+- commits:
+    - body: null
+- commits:
+    - hash: e34348b3713ac3481b8aacf96bbbb656f56a78e4
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Use Bosch BSEC for BME680 readings
+- commits:
+    - body: null
+- commits:
+    - hash: a2a32779c536fc03d68ce89408f73873f776f000
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update Grafana dashboard to show new IAQ ratings
+- commits:
+    - body: null
+- commits:
+    - hash: e3def4f57080256fecfff39cfa549407ece7a8c2
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update units on pressure graph to mbar
+- commits:
+    - body: null
+- commits:
+    - hash: 8d9ea70db240eac6a8ab79e55d3a469fae35abb6
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add offsetting functionality
+- commits:
+    - body: null
+- commits:
+    - hash: ae08bb2aad7f3be7e81f69942849d4e91f636936
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Remove grafana dependency from sensor
+- commits:
+    - body: null
+- commits:
+    - hash: 03b4b97178051df2e24518676c2099f7bf2b8fc3
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update dashboard to EPA IAQ phrasing and colours
+- commits:
+    - body: null
+- commits:
+    - hash: 2857259c2f116df417b8ac89a0983fb8a12907ea
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Restore functionality for sensors on secondary address
+- commits:
+    - body: null
+- commits:
+    - hash: 6073aee4b068cddb8e47f7b5ccf602187b03ed94
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Make bme680 thread more robust
+- commits:
+    - body: null
+- commits:
+    - hash: 3d41f0164dc722dcafac1e276c2b913858392375
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add sleep to prevent loop running away, correct arguments for secondary
+- commits:
+    - body: null
+- commits:
+    - hash: a38d2308845a0f016dfcfca721c4d6828882490d
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Refine sense-HAT IAQ estimation calculation
+- commits:
+    - body: null
+- commits:
+    - hash: 824f695df0609bef1305426a119b750d385a3d39
+- commits:
+    - author: Resin CI
+- commits:
+    - subject: v1.3.0
+- commits:
+    - body: null
+- commits:
+    - hash: 3ca92cdc34539bfee195c767ad72dc2485b66f9c
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Merge branch 'master' into bosch-library
+- commits:
+    - body: null
+- commits:
+    - hash: 60cb0779912726cac7f74ec3758f8a9f25499544
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add images for readme
+- commits:
+    - body: null
+- commits:
+    - hash: a4888a87bf6e5f288d68e31516dc78be79dc7146
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Update readme with screenshots
+- commits:
+    - body: null
+- version: 1.3.0
+- date: 2019-05-29T02:55:02Z
+- commits:
+    - hash: 25274dce820e9d05098ec4ed8df68c1986f867f7
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Use Grafana provisioning
+- commits:
+    - body: null
+- commits:
+    - hash: 57d97025f0d6e916ce4420669a075985d61c3647
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change method used to set home dashboard
+- commits:
+    - body: null
+- version: 1.2.0
+- date: 2019-05-24T21:42:00Z
+- commits:
+    - hash: 7235ab2dd972da6795276ca8f334f90c7959deec
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Change reading frequency to keep measurements inline with baseline
+- commits:
+    - body: null
+- version: 1.1.0
+- date: 2019-05-21T14:54:18Z
+- commits:
+    - hash: 1ebeb847310a6ed391a208e741079579187ea96c
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Updated to Python 3, removed Sense-HAT library dependency
+- commits:
+    - body: This loses the pressure reading functionality if you're using a Sense-HAT.
+        Humidity, temperature and LED Matrix function is retained. BME680 is
+        unaffected.
+- commits:
+    - hash: 0138c44518590dfbff288859927bd24703f1f633
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Removed now unused images (defined in code)
+- commits:
+    - body: null
+- commits:
+    - hash: 3479a08a6d423d99a0b674c10b0dd2ffaaa2e8bc
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Remove excessive happy face comments
+- commits:
+    - body: null
+- version: 1.0.4
+- date: 2019-05-10T21:59:31Z
+- commits:
+    - hash: a0548f37c7d7e1f3f45cd27e8cbe2d79ea9d44c6
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Fix python version - latest is failing to build
+- commits:
+    - body: null
+- version: 1.0.3
+- date: 2019-04-19T22:33:01Z
+- commits:
+    - hash: d28854519e240ee363e0414edf3fbba6287fa519
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Adding chmod +x back as several users have reported issues with v1.0.2
+- commits:
+    - body: null
+- commits:
+    - hash: c7428c63c2866de5dd10af182b0da6817c52493a
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Merge branch 'master' into fix-download-script
+- commits:
+    - body: null
+- version: 1.0.2
+- date: 2019-04-19T15:41:27Z
+- commits:
+    - hash: 5e7c49fa6a9b542ad895ca23517339a4344a4b64
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add +x permissions to grafana download script
+- commits:
+    - body: null
+- commits:
+    - hash: 6892b4c0b4012278b85de42634ba953c50444be6
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add file mode +x on Grafana download script
+- commits:
+    - body: null
+- version: 1.0.1
+- date: 2019-04-19T10:37:32Z
+- commits:
+    - hash: d2524a6ca07aee7f122ac73006668f0d38a59d9a
+- commits:
+    - author: Akis Kesoglou
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: Move downloading of grafana to a separate script
+- commits:
+    - body: This mitigates a CLI issue that causes the build to fail under emulation.
+- version: 1.0.0
+- date: 2019-04-11T19:00:47Z
+- commits:
+    - hash: b9d181c5173e46bca7772b3370100e0dd4981574
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Added detection for BME680 on 0x76 and 0x77
+- commits:
+    - body: null
+- commits:
+    - hash: 30dadb87960c3cec1eb101a2934bcc82dc7e3815
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Modify device selection code in sensor
+- commits:
+    - body: null
+- commits:
+    - hash: 818f9b4ff14288b2682644b9b17cd542919ba654
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Chris Crocker-White <chriscw@balena.io>
+- commits:
+    - subject: Add repo.yml and codeowners
+- commits:
+    - body: null
+- commits:
+    - hash: 4319761ebb3569d8f31037360126398af3478f24
+- commits:
+    - author: Chris Crocker-White
+- commits:
+    - subject: Merge branch 'master' into support-secondary-i2c-address
+- commits:
+    - body: null

@@ -4,7 +4,7 @@
 
 balenaSense is a Raspberry Pi [balenaCloud](https://www.balena.io/cloud/) starter project taking readings from sensors, like a Bosch BME680 or [similar sensors](../docs/getting-started/#sensors), storing data using InfluxDB and reporting using Grafana. For a detailed, step-by-step build process, please use the official project guide for [balenaSense v2](https://www.balena.io/blog/balenasense-v2-updated-temperature-pressure-and-humidity-monitoring-for-raspberry-pi/).
 
-This project uses the [sensor](https://github.com/balenablocks/sensor), [connector](https://github.com/balenablocks/connector), and [dashboard](https://github.com/balenablocks/dashboard) [balenaBlocks](https://github.com/balenablocks) to reduce the amount of code you need to manage so that you can simply set up your sensor, send data between sensor(s) and database, and immediately access a customizable, remote dashboard.
+This project uses the [sensor](https://github.com/balena-labs-projects/sensor), [connector](https://github.com/balena-labs-projects/connector), and [dashboard](https://github.com/balena-labs-projects/dashboard) [balenaBlocks](https://github.com/balena-labs-projects) to reduce the amount of code you need to manage so that you can simply set up your sensor, send data between sensor(s) and database, and immediately access a customizable, remote dashboard.
 
 ## Hardware required
 
@@ -59,7 +59,7 @@ If you make your connections manually, just make sure you only connect similar w
 
 ### Automatically sensing sensors
 
-BalenaSense will automatically scan for connected sensors. Each connected I2C sensor has an address that must be unique. This is usually not an issue unless you connect more than one sensor of the same type. If this is the case, check the sensor’s datasheet to see how/if you can change the address of one of the sensors so they don’t conflict. There’s more information about this in the sensor block’s [readme](https://github.com/balenablocks/sensor).
+BalenaSense will automatically scan for connected sensors. Each connected I2C sensor has an address that must be unique. This is usually not an issue unless you connect more than one sensor of the same type. If this is the case, check the sensor’s datasheet to see how/if you can change the address of one of the sensors so they don’t conflict. There’s more information about this in the sensor block’s [readme](https://github.com/balena-labs-projects/sensor).
 
 ## Deploying the software
 You have three options to deploy the software:

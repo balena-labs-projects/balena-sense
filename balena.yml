@@ -11,12 +11,12 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/balenalabs/balena-sense'
+      url: 'https://github.com/balena-labs-projects/balena-sense'
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/balenalabs/balena-sense/master/images/hub-logo512.png
+        https://raw.githubusercontent.com/balena-labs-projects/balena-sense/master/images/hub-logo512.png
 data:
   applicationEnvironmentVariables:
     - COLLAPSE_FIELDS: 1

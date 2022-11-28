@@ -38,11 +38,11 @@ There are multiple ways to deploy the project to your device. Here's a list of s
 * adding your device to the [balenaSense Open Fleet](https://hub.balena.io/balenalabs/balenasense), where anyone can add a device without a balenaCloud account to try things out
 * you can also use the Deploy with balena button below to get started quickly:
 
-[![balenaSense v2 Deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sense)
+[![balenaSense v2 Deploy with balena](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sense)
 
 *Note: You'll have to set up a balenaCloud account to use this method. balenaCloud starter accounts are free and fully supported up to ten devices.*
 
-* if you plan on [cloning this project](https://github.com/balenalabs/balena-sense) and making other changes, you’ll want to [install balenaCLI](https://github.com/balena-io/balena-cli) 
+* if you plan on [cloning this project](https://github.com/balena-labs-projects/balena-sense) and making other changes, you’ll want to [install balenaCLI](https://github.com/balena-io/balena-cli) 
 
 Whichever method you choose, you'll want a tool to flash the SD card such as [balenaEtcher](https://www.balena.io/etcher/).
 
@@ -68,7 +68,7 @@ You have three options to deploy the software:
 [Becoming part of our Open Fleet](https://hub.balena.io/balenalabs/balenasense) is the fastest option for getting started, as you don’t need to have a balenaCloud account. Follow the directions here to flash an SD card, insert it into your device, and download and run balenaSense. (For more information about using balenaSense, see the “Device first boot” section below) 
 
 ### Cloning the project (for advanced users)
-Advanced users can clone [the project](https://github.com/balenalabs/balena-sense) from GitHub and use the [balena CLI](https://github.com/balena-io/balena-cli) to push the application to their device. This is the best option if you want to tinker with the project and have full control.  
+Advanced users can clone [the project](https://github.com/balena-labs-projects/balena-sense) from GitHub and use the [balena CLI](https://github.com/balena-io/balena-cli) to push the application to their device. This is the best option if you want to tinker with the project and have full control.  
 
 Our [Getting Started guide](https://www.balena.io/docs/learn/getting-started/raspberrypi3/python/) covers this option. (Follow the steps below for the third option after you have created an application and pushed the code using the CLI)
 
@@ -76,7 +76,7 @@ Our [Getting Started guide](https://www.balena.io/docs/learn/getting-started/ras
 
 [Sign up] for a free balenaCloud account (your first ten devices are free and full-featured!) and then use the button below to create and deploy the application:
 
-[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sense)
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sense)
 
 ## Setup guides
 A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/balenasense-v2-updated-temperature-pressure-and-humidity-monitoring-for-raspberry-pi/).

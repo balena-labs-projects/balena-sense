@@ -1,7 +1,7 @@
 # Customization
 
 ## Adding support for various sensors
-We encourage contributors to add code to extend our supported sensors. Please review [existing issues](https://github.com/balenalabs/balena-sense/issues) to see which sensors and types are currently being worked on. We'll eventually build a list of compatible sensors.
+We encourage contributors to add code to extend our supported sensors. Please review [existing issues](https://github.com/balena-labs-projects/balena-sense/issues) to see which sensors and types are currently being worked on. We'll eventually build a list of compatible sensors.
 
 ## Multiple sensors
 

@@ -12,7 +12,7 @@
 
 Run balenaSense quickly by deploying it to a balenaCloud application. Log in and deploy the application with just one click by using the button below:
 
-[![](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balenalabs/balena-sense)
+[![](https://balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-labs-projects/balena-sense)
 
 Or add your device to the [balenaSense Open Fleet](https://hub.balena.io/balenalabs/balenasense) to try the project out without a balenaCloud account.
 
@@ -50,7 +50,7 @@ Do you want to help make balenaSense better? Take a look at our [Contributing Gu
 
 ## Getting Help
 
-If you're having any problem, please [raise an issue](https://github.com/balenalabs/balena-sense/issues/new) on GitHub and we will be happy to help. You can also find help on the balenaForums, in a special section [dedicated to balenaSense](https://forums.balena.io/c/project-help/balenasense/86).
+If you're having any problem, please [raise an issue](https://github.com/balena-labs-projects/balena-sense/issues/new) on GitHub and we will be happy to help. You can also find help on the balenaForums, in a special section [dedicated to balenaSense](https://forums.balena.io/c/project-help/balenasense/86).
 
 ## Setup guides
 A full guide covering the initial setup of this project is available on [our blog](https://www.balena.io/blog/balenasense-v2-updated-temperature-pressure-and-humidity-monitoring-for-raspberry-pi/).

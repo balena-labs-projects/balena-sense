@@ -4,7 +4,7 @@
 
 ![](https://assets.balena.io/blog-common/2021/07/sensev2-services.png)
 
-After following all of the instructions on [Getting Started](../docs/getting-started), ensure all the services are running on your device.
+After following all of the instructions on [Getting Started](01-getting-started.md), ensure all the services are running on your device.
 
 If everything worked out correctly, after a few minutes your device information screen in the dashboard should look something like this, showing the services running, one for each of the software components. (If not, check out our [troubleshooting guide](https://www.balena.io/docs/faq/troubleshooting/troubleshooting/) or head over to [the forums](https://forums.balena.io/) where we can help you out.)
 
@@ -20,7 +20,7 @@ If you added your device to the balenaSense Open Fleet, you can access your dash
 
 If you're using balenaSense on a device on balenaCloud, you can use the built-in VPN and remote URL to access your device's dashboard remotely. You can access this URL from anywhere where you have internet access.
 
-If you don’t want to enable the public device access, you can still view the dashboard from within your own local network by using the IP address value from the image above (green encircled area.) Yours will be different, but if you enter http://<ip address> into a browser, you’ll still be able to access the dashboard as long as you’re on the same network as the device. For example, to access my device I would use http://192.168.1.251.
+If you don’t want to enable the public device access, you can still view the dashboard from within your own local network by using the IP address value from the image above (green encircled area.) Yours will be different, but if you enter http://your-ip-address into a browser, you’ll still be able to access the dashboard as long as you’re on the same network as the device. For example, to access my device I would use http://192.168.1.251.
 
 Remember that if you have multiple devices running balenaSense, you'll want to keep track of which IP is for which setup.
 
